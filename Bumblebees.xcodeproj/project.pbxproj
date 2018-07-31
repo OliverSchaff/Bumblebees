@@ -13,9 +13,13 @@
 		A2CEC57B2110D8EE00684926 /* Bumblebees.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2CEC5792110D8EE00684926 /* Bumblebees.xcdatamodeld */; };
 		A2CEC57D2110D8EF00684926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CEC57C2110D8EF00684926 /* Assets.xcassets */; };
 		A2CEC5802110D8EF00684926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CEC57E2110D8EF00684926 /* LaunchScreen.storyboard */; };
+		D29AD87ED389EEFF6B38A130 /* Pods_Bumblebees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E4BE2A735F5B1081AA4E149 /* Pods-Bumblebees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebees.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees.release.xcconfig"; sourceTree = "<group>"; };
+		6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bumblebees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92F7FC4D1C280A7DBD2BE462 /* Pods-Bumblebees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees.debug.xcconfig"; sourceTree = "<group>"; };
 		A2CEC56F2110D8EE00684926 /* Bumblebees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumblebees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CEC5722110D8EE00684926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2CEC5742110D8EE00684926 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D29AD87ED389EEFF6B38A130 /* Pods_Bumblebees.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				A2CEC5712110D8EE00684926 /* Bumblebees */,
 				A2CEC5702110D8EE00684926 /* Products */,
+				EA2554A589686F108EDE4EC1 /* Pods */,
+				A35208BB14D3A46F5FF27B19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = Bumblebees;
 			sourceTree = "<group>";
 		};
+		A35208BB14D3A46F5FF27B19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA2554A589686F108EDE4EC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92F7FC4D1C280A7DBD2BE462 /* Pods-Bumblebees.debug.xcconfig */,
+				2E4BE2A735F5B1081AA4E149 /* Pods-Bumblebees.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2CEC5842110D8EF00684926 /* Build configuration list for PBXNativeTarget "Bumblebees" */;
 			buildPhases = (
+				32A2EE178DF39D9278ECC191 /* [CP] Check Pods Manifest.lock */,
 				A2CEC56B2110D8EE00684926 /* Sources */,
 				A2CEC56C2110D8EE00684926 /* Frameworks */,
 				A2CEC56D2110D8EE00684926 /* Resources */,
+				44220EBBBB3A727EA3FB614C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32A2EE178DF39D9278ECC191 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bumblebees-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44220EBBBB3A727EA3FB614C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A2CEC56B2110D8EE00684926 /* Sources */ = {
@@ -282,6 +349,7 @@
 		};
 		A2CEC5852110D8EF00684926 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92F7FC4D1C280A7DBD2BE462 /* Pods-Bumblebees.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +368,7 @@
 		};
 		A2CEC5862110D8EF00684926 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E4BE2A735F5B1081AA4E149 /* Pods-Bumblebees.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
