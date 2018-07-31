@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UiT-ii-kc5">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Experiment Setup-->
+        <scene sceneID="9lV-SB-Vff">
+            <objects>
+                <tableViewController id="sip-PJ-3WM" customClass="ExperimentSetupVC" customModule="Bumblebees" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="iKE-xG-Zk2" customClass="AppTableView" customModule="Bumblebees" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Bees" id="2O9-pa-apO">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="h0n-Hh-3ns" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h0n-Hh-3ns" id="P8s-c2-rD5">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelectionDuringEditing="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aGj-le-xXd" customClass="ObjectsTableView" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
+                                                    <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <prototypes>
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="objectCell" textLabel="SLJ-yn-29v" style="IBUITableViewCellStyleDefault" id="6aq-qZ-SAa" customClass="ObjectCell" customModule="Bumblebees" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6aq-qZ-SAa" id="5v3-c9-8oT">
+                                                                <rect key="frame" x="0.0" y="0.0" width="342" height="43.666666666666664"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="BeeName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SLJ-yn-29v" customClass="AppLabel" customModule="Bumblebees" customModuleProvider="target">
+                                                                        <rect key="frame" x="20" y="0.0" width="322" height="43.666666666666664"/>
+                                                                        <autoresizingMask key="autoresizingMask"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </tableViewCellContentView>
+                                                            <connections>
+                                                                <outlet property="objectNameLabel" destination="SLJ-yn-29v" id="g4j-yQ-JSd"/>
+                                                            </connections>
+                                                        </tableViewCell>
+                                                    </prototypes>
+                                                </tableView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="aGj-le-xXd" secondAttribute="trailing" id="1Ke-9Y-Cxe"/>
+                                                <constraint firstItem="aGj-le-xXd" firstAttribute="top" secondItem="P8s-c2-rD5" secondAttribute="top" id="AQN-oO-NqC"/>
+                                                <constraint firstItem="aGj-le-xXd" firstAttribute="leading" secondItem="P8s-c2-rD5" secondAttribute="leading" id="do0-IJ-Anh"/>
+                                                <constraint firstAttribute="bottom" secondItem="aGj-le-xXd" secondAttribute="bottom" id="iiO-8U-OIA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="bvN-bq-bkO">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="44" id="MwZ-oW-b8Y" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="291.33333333333337" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MwZ-oW-b8Y" id="83l-Zc-Y1g">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQL-k1-RCD">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                                    <state key="normal" title="Start Experiment"/>
+                                                    <connections>
+                                                        <action selector="startExperiment:" destination="sip-PJ-3WM" eventType="touchUpInside" id="48I-4I-Bc6"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="jQL-k1-RCD" secondAttribute="bottom" id="3Xv-79-mQI"/>
+                                                <constraint firstItem="jQL-k1-RCD" firstAttribute="leading" secondItem="83l-Zc-Y1g" secondAttribute="leading" id="G4M-fH-Hln"/>
+                                                <constraint firstItem="jQL-k1-RCD" firstAttribute="top" secondItem="83l-Zc-Y1g" secondAttribute="top" id="nXm-uh-Rt7"/>
+                                                <constraint firstAttribute="trailing" secondItem="jQL-k1-RCD" secondAttribute="trailing" id="pdL-Qo-RWR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="sip-PJ-3WM" id="6oJ-n0-JkQ"/>
+                            <outlet property="delegate" destination="sip-PJ-3WM" id="NSw-5V-wy0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Experiment Setup" id="eXA-J4-YFq">
+                        <barButtonItem key="rightBarButtonItem" title="New Species" id="Qgh-uI-tqo">
+                            <connections>
+                                <action selector="newObject:" destination="sip-PJ-3WM" id="rrF-sl-6HP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="objectsTableView" destination="aGj-le-xXd" id="5DL-Aa-xlj"/>
+                        <segue destination="Wit-CA-FhB" kind="show" identifier="showEditObject" id="FHG-aH-DLt"/>
+                        <segue destination="B7k-4B-WJN" kind="show" identifier="startExperiment" id="JFm-8u-G0h"/>
+                        <segue destination="FPd-kl-JqA" kind="unwind" identifier="unwindToExperimentSetupVC" unwindAction="unwindToExperimentSetupVC:" id="kod-Ae-3Am"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C8R-6d-WW6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FPd-kl-JqA" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3591" y="-985"/>
+        </scene>
+        <!--One Bee-->
+        <scene sceneID="3DW-W6-ShL">
+            <objects>
+                <viewController id="B7k-4B-WJN" customClass="ExperimentVC" customModule="Bumblebees" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dty-eW-SuO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bee" translatesAutoresizingMaskIntoConstraints="NO" id="ISc-BB-mjb">
+                                <rect key="frame" x="8" y="64" width="398" height="672"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="ibW-zw-7ho">
+                                <rect key="frame" x="8" y="118" width="398" height="610"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bUZ-D6-BYK">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="519"/>
+                                        <subviews>
+                                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="re0-T7-5Gs" customClass="ButtonView" customModule="Bumblebees" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="519"/>
+                                                <color key="backgroundColor" red="0.66666666666666663" green="0.83137254901960789" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="landed"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4M-g3-RlH" customClass="ButtonView" customModule="Bumblebees" customModuleProvider="target">
+                                                <rect key="frame" x="203" y="0.0" width="195" height="519"/>
+                                                <color key="backgroundColor" red="0.80000000000000004" green="0.94509803921568625" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="landed"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7t-37-fLg" customClass="ButtonView" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="527" width="398" height="83"/>
+                                        <color key="backgroundColor" red="0.97305089239999998" green="0.83261032319999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Undo"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="bUZ-D6-BYK" secondAttribute="trailing" id="5tD-aq-ifx"/>
+                                    <constraint firstItem="bUZ-D6-BYK" firstAttribute="top" secondItem="ibW-zw-7ho" secondAttribute="top" id="hXM-HL-A1t"/>
+                                    <constraint firstItem="bUZ-D6-BYK" firstAttribute="leading" secondItem="ibW-zw-7ho" secondAttribute="leading" id="r7W-XD-l4G"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visits: 23" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddV-6j-p6f" customClass="AppLabel" customModule="Bumblebees" customModuleProvider="target">
+                                <rect key="frame" x="327.33333333333331" y="85" width="70.666666666666686" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-KZ-S7T">
+                                <rect key="frame" x="16" y="80" width="75" height="30"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bee" translatesAutoresizingMaskIntoConstraints="NO" id="RqU-Hk-fqu">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="ZHP-Qq-bHn"/>
+                                            <constraint firstAttribute="width" constant="30" id="h8d-yB-AgZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bee1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlg-KW-KOY" customClass="AppLabel" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="38" y="0.0" width="37" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6R-FS-qez">
+                                <rect key="frame" x="99" y="82" width="216" height="27"/>
+                                <state key="normal" image="HelpIcon"/>
+                                <connections>
+                                    <action selector="help:" destination="B7k-4B-WJN" eventType="touchUpInside" id="R1K-Aj-pl3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9wg-XH-qwJ" firstAttribute="trailing" secondItem="ddV-6j-p6f" secondAttribute="trailing" constant="16" id="9Lp-51-GPP"/>
+                            <constraint firstItem="ISc-BB-mjb" firstAttribute="leading" secondItem="9wg-XH-qwJ" secondAttribute="leading" constant="8" id="ASv-Eg-jAG"/>
+                            <constraint firstItem="9wg-XH-qwJ" firstAttribute="trailing" secondItem="ibW-zw-7ho" secondAttribute="trailing" constant="8" id="Cki-Pu-MGU"/>
+                            <constraint firstItem="9wg-XH-qwJ" firstAttribute="bottom" secondItem="ibW-zw-7ho" secondAttribute="bottom" constant="8" id="DOv-Zf-eQW"/>
+                            <constraint firstItem="9wg-XH-qwJ" firstAttribute="trailing" secondItem="ISc-BB-mjb" secondAttribute="trailing" constant="8" id="EBf-KL-iYO"/>
+                            <constraint firstItem="p6R-FS-qez" firstAttribute="centerY" secondItem="DE3-KZ-S7T" secondAttribute="centerY" id="HRK-go-5bP"/>
+                            <constraint firstItem="p6R-FS-qez" firstAttribute="centerX" secondItem="9wg-XH-qwJ" secondAttribute="centerX" id="HgO-BK-BwV"/>
+                            <constraint firstItem="ibW-zw-7ho" firstAttribute="top" secondItem="DE3-KZ-S7T" secondAttribute="bottom" constant="8" id="Lsf-1J-kx2"/>
+                            <constraint firstItem="DE3-KZ-S7T" firstAttribute="leading" secondItem="9wg-XH-qwJ" secondAttribute="leading" constant="16" id="apu-9K-g1N"/>
+                            <constraint firstItem="9wg-XH-qwJ" firstAttribute="bottom" secondItem="ISc-BB-mjb" secondAttribute="bottom" id="cfE-Zm-eQH"/>
+                            <constraint firstItem="ibW-zw-7ho" firstAttribute="leading" secondItem="9wg-XH-qwJ" secondAttribute="leading" constant="8" id="epc-Ie-YyT"/>
+                            <constraint firstItem="ddV-6j-p6f" firstAttribute="centerY" secondItem="mlg-KW-KOY" secondAttribute="centerY" id="gAC-Vv-4lE"/>
+                            <constraint firstItem="DE3-KZ-S7T" firstAttribute="top" secondItem="9wg-XH-qwJ" secondAttribute="top" constant="16" id="hsN-sE-KbU"/>
+                            <constraint firstItem="ddV-6j-p6f" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Dty-eW-SuO" secondAttribute="leading" constant="20" symbolic="YES" id="qjH-lH-jXj"/>
+                            <constraint firstItem="p6R-FS-qez" firstAttribute="leading" secondItem="DE3-KZ-S7T" secondAttribute="trailing" constant="8" id="w5c-ad-rA0"/>
+                            <constraint firstItem="ISc-BB-mjb" firstAttribute="top" secondItem="9wg-XH-qwJ" secondAttribute="top" id="xHh-zb-EUh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9wg-XH-qwJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="One Bee" id="cnG-a8-LZi">
+                        <barButtonItem key="rightBarButtonItem" title="New Bee" id="ONk-9d-4OG">
+                            <connections>
+                                <action selector="newBee:" destination="B7k-4B-WJN" id="82h-3A-thK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="ISc-BB-mjb" id="EWS-Hq-mej"/>
+                        <outlet property="beeNameLabel" destination="mlg-KW-KOY" id="YeK-aW-UnH"/>
+                        <outlet property="leftButton" destination="re0-T7-5Gs" id="aQ9-ce-IeE"/>
+                        <outlet property="objectImageView" destination="RqU-Hk-fqu" id="fLC-MJ-3F4"/>
+                        <outlet property="rightButton" destination="q4M-g3-RlH" id="f91-2S-gw8"/>
+                        <outlet property="undoButton" destination="w7t-37-fLg" id="btz-bi-KMW"/>
+                        <outlet property="visitCounter" destination="ddV-6j-p6f" id="0Km-fE-2bE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y93-ot-6Re" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3590" y="-247.5"/>
+        </scene>
+        <!--Bumblebees-->
+        <scene sceneID="yDU-Pg-Z6h">
+            <objects>
+                <tableViewController id="JvM-Zz-0Gm" customClass="EntryVC" customModule="Bumblebees" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="B0Z-gs-9gU" customClass="AppTableView" customModule="Bumblebees" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Experiments" id="uUa-hm-tXA">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Vx9-dO-6Ei" style="IBUITableViewCellStyleDefault" id="08z-7O-Ie8" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="08z-7O-Ie8" id="oWQ-YE-Onu">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="One bee visiting many flowers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vx9-dO-6Ei" customClass="AppLabel" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="sip-PJ-3WM" kind="show" identifier="oneBeeSetup" id="tRa-hQ-xJp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="pZL-hR-wvg" style="IBUITableViewCellStyleDefault" id="X2N-uG-bEF" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="99.333333333333343" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X2N-uG-bEF" id="ahD-wQ-qOJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="One flower visited by many bees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pZL-hR-wvg" customClass="AppLabel" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="sip-PJ-3WM" kind="show" identifier="oneFlowerSetup" id="9U7-Wv-pe6"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Lab Book" id="9Re-hI-p5p">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="FNv-cl-9qx" style="IBUITableViewCellStyleDefault" id="fdn-R1-mKP" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="199.33333333333334" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fdn-R1-mKP" id="WGg-rC-ez8">
+                                            <rect key="frame" x="0.0" y="0.0" width="376" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Add lab book entry" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FNv-cl-9qx" customClass="AppLabel" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="0.0" width="356" height="43.666666666666664"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="8bO-bK-YPD" kind="show" identifier="showAddLabBookEntry" id="FhC-4F-oyE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Export" footerTitle="Convert to CSV with https://json-csv.com" id="SMd-6R-CcK">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="u3E-XH-q0f" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="306.66666666666669" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u3E-XH-q0f" id="jOK-k6-QyU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6NR-nC-NYu">
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <state key="normal" title="Export Experiment Data"/>
+                                                    <connections>
+                                                        <action selector="exportBees:" destination="JvM-Zz-0Gm" eventType="touchUpInside" id="l0x-Xh-mLl"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="6NR-nC-NYu" secondAttribute="trailing" id="17i-Jl-VmQ"/>
+                                                <constraint firstItem="6NR-nC-NYu" firstAttribute="top" secondItem="jOK-k6-QyU" secondAttribute="topMargin" id="ePG-jJ-MNl"/>
+                                                <constraint firstItem="6NR-nC-NYu" firstAttribute="leading" secondItem="jOK-k6-QyU" secondAttribute="leadingMargin" id="mVV-3i-36Y"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="6NR-nC-NYu" secondAttribute="bottom" id="vfS-Bn-zke"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="nfU-yy-Ylp" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="350.66666666666674" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nfU-yy-Ylp" id="B93-dD-gzi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NF8-9e-z8l">
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <state key="normal" title="Export Lab Book"/>
+                                                    <connections>
+                                                        <action selector="exportLabBook:" destination="JvM-Zz-0Gm" eventType="touchUpInside" id="6nU-c5-rvU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NF8-9e-z8l" firstAttribute="leading" secondItem="B93-dD-gzi" secondAttribute="leadingMargin" id="6i1-xg-m0z"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NF8-9e-z8l" secondAttribute="trailing" id="7Cz-Jo-7Wu"/>
+                                                <constraint firstItem="NF8-9e-z8l" firstAttribute="top" secondItem="B93-dD-gzi" secondAttribute="topMargin" id="PLJ-hT-rna"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NF8-9e-z8l" secondAttribute="bottom" id="wAO-9x-0yd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Nightmode" id="ldq-jy-b7D">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" id="Z22-d8-xZZ" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="462.66666666666674" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Z22-d8-xZZ" id="dV6-QT-eol">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUA-zv-tah" customClass="AppLabel" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="28" y="11" width="90" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t8J-xg-MXh">
+                                                    <rect key="frame" x="337" y="6" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="nightModeChanged:" destination="JvM-Zz-0Gm" eventType="valueChanged" id="4ND-vc-rfo"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dUA-zv-tah" firstAttribute="leading" secondItem="dV6-QT-eol" secondAttribute="leadingMargin" constant="8" id="Hs4-3g-yx0"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dUA-zv-tah" secondAttribute="trailingMargin" id="Pnb-Od-xcG"/>
+                                                <constraint firstItem="t8J-xg-MXh" firstAttribute="centerY" secondItem="dV6-QT-eol" secondAttribute="centerY" id="Wtw-Mo-yGY"/>
+                                                <constraint firstItem="dUA-zv-tah" firstAttribute="centerY" secondItem="dV6-QT-eol" secondAttribute="centerY" id="ZfS-ho-tl4"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="t8J-xg-MXh" secondAttribute="trailing" constant="8" id="hzL-eU-dpx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="JvM-Zz-0Gm" id="P1S-BX-UaV"/>
+                            <outlet property="delegate" destination="JvM-Zz-0Gm" id="Nox-Jb-lzy"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Bumblebees" id="12G-Xp-Uty"/>
+                    <connections>
+                        <outlet property="nightModeSwitch" destination="t8J-xg-MXh" id="h7M-ci-nEI"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fGn-4d-ycw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2628" y="-1158"/>
+        </scene>
+        <!--Add Entry-->
+        <scene sceneID="fVW-vR-KC8">
+            <objects>
+                <tableViewController id="bmE-qp-fWT" customClass="AddLabBookEntryVC" customModule="Bumblebees" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="zBj-VI-Uja" customClass="AppTableView" customModule="Bumblebees" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Lab Book Entry" id="c9D-hz-N5m">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="300" id="rCy-IB-NCy" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rCy-IB-NCy" id="Dqn-0T-8vt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="299.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="nz3-9d-7V9" customClass="AppTextView" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="11" width="374" height="278"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter text here." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCI-FA-SQy" customClass="AppLabel" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="24.000000000000007" y="19" width="99.666666666666686" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nz3-9d-7V9" firstAttribute="top" secondItem="Dqn-0T-8vt" secondAttribute="topMargin" id="5Ay-mu-mJl"/>
+                                                <constraint firstItem="MCI-FA-SQy" firstAttribute="leading" secondItem="Dqn-0T-8vt" secondAttribute="leadingMargin" constant="4" id="B92-WO-Tla"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nz3-9d-7V9" secondAttribute="trailing" id="Wv8-Ns-ubM"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MCI-FA-SQy" secondAttribute="trailingMargin" id="bvg-k0-4MW"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="nz3-9d-7V9" secondAttribute="bottom" id="dzc-Em-K0Z"/>
+                                                <constraint firstItem="nz3-9d-7V9" firstAttribute="leading" secondItem="Dqn-0T-8vt" secondAttribute="leadingMargin" id="nrw-P2-Kl7"/>
+                                                <constraint firstItem="MCI-FA-SQy" firstAttribute="top" secondItem="Dqn-0T-8vt" secondAttribute="topMargin" constant="8" id="soZ-60-QKQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="bmE-qp-fWT" id="fdl-iz-K1e"/>
+                            <outlet property="delegate" destination="bmE-qp-fWT" id="VA8-B1-hpt"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Entry" id="zmy-Sl-Jlo">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Z6a-ye-J5H">
+                            <connections>
+                                <action selector="cancel:" destination="bmE-qp-fWT" id="NRN-vA-AOf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="HqK-yt-Uwc">
+                            <connections>
+                                <action selector="save:" destination="bmE-qp-fWT" id="JaO-A8-QqQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="enterTextLabel" destination="MCI-FA-SQy" id="oTN-rz-4ko"/>
+                        <outlet property="entryTextView" destination="nz3-9d-7V9" id="K6Q-qg-QAN"/>
+                        <segue destination="1Yc-0l-aVD" kind="unwind" identifier="unwindToExperimentSetupVC" unwindAction="unwindToExperimentSetupVC:" id="cYR-iH-qFp"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ctf-JQ-N6O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1Yc-0l-aVD" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4354" y="-1712"/>
+        </scene>
+        <!--Edit ObjectVC-->
+        <scene sceneID="cdG-qQ-Lt5">
+            <objects>
+                <tableViewController id="SUg-XK-sIg" customClass="EditObjectVC" customModule="Bumblebees" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="RMm-8K-LwY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Name" id="1Pa-EG-MfP">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aIg-Gd-ISQ" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333333333333343" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aIg-Gd-ISQ" id="W4L-f7-lBc">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Qq-MK-Qvl" customClass="AppTextField" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="7" width="374" height="30"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="6Qq-MK-Qvl" firstAttribute="centerY" secondItem="W4L-f7-lBc" secondAttribute="centerY" id="1OS-Ic-I3H"/>
+                                                <constraint firstItem="6Qq-MK-Qvl" firstAttribute="trailing" secondItem="W4L-f7-lBc" secondAttribute="trailingMargin" id="OGF-d5-gfX"/>
+                                                <constraint firstItem="6Qq-MK-Qvl" firstAttribute="leading" secondItem="W4L-f7-lBc" secondAttribute="leadingMargin" id="RKs-qT-pJD"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Unique ID" id="kHN-a7-gSZ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Vku-Yt-B5R" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="155.33333333333334" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Vku-Yt-B5R" id="Kyn-ks-NKq">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ERTZ-UUUZZZTTTRRR-UUUU" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtq-st-r41" customClass="AppLabel" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="14" width="374" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vtq-st-r41" firstAttribute="leading" secondItem="Kyn-ks-NKq" secondAttribute="leadingMargin" id="LmN-fN-T8i"/>
+                                                <constraint firstItem="vtq-st-r41" firstAttribute="centerY" secondItem="Kyn-ks-NKq" secondAttribute="centerY" id="Wo2-fA-yva"/>
+                                                <constraint firstItem="vtq-st-r41" firstAttribute="trailing" secondItem="Kyn-ks-NKq" secondAttribute="trailingMargin" id="k7p-A5-chU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Flower Visits" id="KjW-JG-WFV">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="L1W-IH-nEN" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="255.33333333333337" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="L1W-IH-nEN" id="k2B-5m-bbK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NumberOf visits: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5G-cc-3y8" customClass="AppLabel" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="14" width="374" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="F5G-cc-3y8" firstAttribute="centerY" secondItem="k2B-5m-bbK" secondAttribute="centerY" id="M77-mP-xCt"/>
+                                                <constraint firstItem="F5G-cc-3y8" firstAttribute="trailing" secondItem="k2B-5m-bbK" secondAttribute="trailingMargin" id="fzr-sF-x90"/>
+                                                <constraint firstItem="F5G-cc-3y8" firstAttribute="leading" secondItem="k2B-5m-bbK" secondAttribute="leadingMargin" id="w1K-17-BhA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Comments" id="ARP-qP-buJ">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="120" id="SP8-jF-yEF" customClass="AppTableViewCell" customModule="Bumblebees" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="355.33333333333337" width="414" height="120"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SP8-jF-yEF" id="sxl-cV-Eh9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="119.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="K36-uT-tD6" customClass="AppTextView" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="20" y="11" width="374" height="98"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter comment here." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5N-HI-1I6" customClass="AppLabel" customModule="Bumblebees" customModuleProvider="target">
+                                                    <rect key="frame" x="24" y="19" width="135.66666666666666" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="B5N-HI-1I6" firstAttribute="leading" secondItem="sxl-cV-Eh9" secondAttribute="leadingMargin" constant="4" id="DcA-89-gGd"/>
+                                                <constraint firstItem="B5N-HI-1I6" firstAttribute="top" secondItem="sxl-cV-Eh9" secondAttribute="topMargin" constant="8" id="EHa-ZQ-Bfa"/>
+                                                <constraint firstItem="K36-uT-tD6" firstAttribute="bottom" secondItem="sxl-cV-Eh9" secondAttribute="bottomMargin" id="IvN-CA-vyc"/>
+                                                <constraint firstItem="K36-uT-tD6" firstAttribute="trailing" secondItem="sxl-cV-Eh9" secondAttribute="trailingMargin" id="bcK-5E-29b"/>
+                                                <constraint firstItem="K36-uT-tD6" firstAttribute="leading" secondItem="sxl-cV-Eh9" secondAttribute="leadingMargin" id="cIW-hh-282"/>
+                                                <constraint firstItem="K36-uT-tD6" firstAttribute="top" secondItem="sxl-cV-Eh9" secondAttribute="topMargin" id="csi-fH-Nkv"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="B5N-HI-1I6" secondAttribute="trailingMargin" id="nuw-ec-Xnu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="SUg-XK-sIg" id="3XD-Vw-J2f"/>
+                            <outlet property="delegate" destination="SUg-XK-sIg" id="Abn-EQ-TPp"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="vC5-UA-KJj">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jvn-IC-FKm">
+                            <connections>
+                                <action selector="cancel:" destination="SUg-XK-sIg" id="cnX-XP-wQE"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="k5v-Fv-YdJ">
+                            <connections>
+                                <action selector="save:" destination="SUg-XK-sIg" id="x9C-RE-Ven"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="commentTextView" destination="K36-uT-tD6" id="ILd-1y-2NF"/>
+                        <outlet property="enterCommentLabel" destination="B5N-HI-1I6" id="apr-oL-79V"/>
+                        <outlet property="eventsLabel" destination="F5G-cc-3y8" id="qLr-Cb-sBH"/>
+                        <outlet property="nameTextField" destination="6Qq-MK-Qvl" id="ZVu-Hu-Q5C"/>
+                        <outlet property="uuidLabel" destination="vtq-st-r41" id="MhC-lo-ry6"/>
+                        <segue destination="cxG-xo-EcC" kind="unwind" identifier="unwindToExperimentSetupVC" unwindAction="unwindToExperimentSetupVC:" id="Wyb-mq-Noa"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fho-zV-Of1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cxG-xo-EcC" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5127" y="-985"/>
+        </scene>
+        <!--App Navigation Controller-->
+        <scene sceneID="Hgh-S6-w3c">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UiT-ii-kc5" customClass="AppNavigationController" customModule="Bumblebees" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4vT-pt-q3U">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JvM-Zz-0Gm" kind="relationship" relationship="rootViewController" id="Dgs-Qu-i8d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QoY-Ul-Rbk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1889" y="-1158"/>
+        </scene>
+        <!--App Navigation Controller-->
+        <scene sceneID="zEY-Gs-BXT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wit-CA-FhB" customClass="AppNavigationController" customModule="Bumblebees" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SCg-oj-6AJ">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SUg-XK-sIg" kind="relationship" relationship="rootViewController" id="vza-uH-h9O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qY5-y2-1el" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4353" y="-985"/>
+        </scene>
+        <!--App Navigation Controller-->
+        <scene sceneID="djm-8K-Zrz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8bO-bK-YPD" customClass="AppNavigationController" customModule="Bumblebees" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aOJ-wX-Bvf">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bmE-qp-fWT" kind="relationship" relationship="rootViewController" id="PAW-NC-06U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5L9-4X-SHl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3592" y="-1712"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Bee" width="166" height="114"/>
+        <image name="HelpIcon" width="27" height="27"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="tRa-hQ-xJp"/>
+    </inferredMetricsTieBreakers>
+</document>

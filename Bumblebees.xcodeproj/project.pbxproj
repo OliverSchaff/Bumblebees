@@ -12,7 +12,41 @@
 		A22773532110DCAC007C03EE /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773502110DCAC007C03EE /* Theming.swift */; };
 		A22773542110DCAC007C03EE /* AppThemeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773512110DCAC007C03EE /* AppThemeProvider.swift */; };
 		A22773552110DCAC007C03EE /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773522110DCAC007C03EE /* AppTheme.swift */; };
-		A22773572110DCE8007C03EE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A22773562110DCE8007C03EE /* Info.plist */; };
+		A22773602110DD26007C03EE /* LabBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773592110DD26007C03EE /* LabBook.swift */; };
+		A22773612110DD26007C03EE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227735A2110DD26007C03EE /* Event.swift */; };
+		A22773622110DD26007C03EE /* FlowerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227735B2110DD26007C03EE /* FlowerData.swift */; };
+		A22773632110DD26007C03EE /* NameProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227735C2110DD26007C03EE /* NameProvider.swift */; };
+		A22773642110DD26007C03EE /* BeeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227735D2110DD26007C03EE /* BeeData.swift */; };
+		A22773652110DD26007C03EE /* LabBookEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227735E2110DD26007C03EE /* LabBookEntry.swift */; };
+		A22773662110DD26007C03EE /* ObjectStudied.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227735F2110DD26007C03EE /* ObjectStudied.swift */; };
+		A227738D2110DD3B007C03EE /* AddLabBookEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773682110DD3B007C03EE /* AddLabBookEntryVC.swift */; };
+		A227738E2110DD3B007C03EE /* EditObjectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227736A2110DD3B007C03EE /* EditObjectVC.swift */; };
+		A227738F2110DD3B007C03EE /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227736C2110DD3B007C03EE /* Stack.swift */; };
+		A22773902110DD3B007C03EE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227736D2110DD3B007C03EE /* Result.swift */; };
+		A22773912110DD3B007C03EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227736E2110DD3B007C03EE /* AppDelegate.swift */; };
+		A22773922110DD3B007C03EE /* SubscribableValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227736F2110DD3B007C03EE /* SubscribableValue.swift */; };
+		A22773932110DD3B007C03EE /* ProtocolsAndExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773702110DD3B007C03EE /* ProtocolsAndExtensions.swift */; };
+		A22773942110DD3B007C03EE /* DataExportHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773712110DD3B007C03EE /* DataExportHelpers.swift */; };
+		A22773952110DD3B007C03EE /* Weak.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773722110DD3B007C03EE /* Weak.swift */; };
+		A22773962110DD3B007C03EE /* ExperimentLogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773742110DD3B007C03EE /* ExperimentLogicController.swift */; };
+		A22773972110DD3B007C03EE /* ObjectsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773752110DD3B007C03EE /* ObjectsTableView.swift */; };
+		A22773982110DD3B007C03EE /* ExperimentSetupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773762110DD3B007C03EE /* ExperimentSetupVC.swift */; };
+		A22773992110DD3B007C03EE /* ExperimentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773772110DD3B007C03EE /* ExperimentVC.swift */; };
+		A227739A2110DD3B007C03EE /* ObjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773782110DD3B007C03EE /* ObjectCell.swift */; };
+		A227739B2110DD3B007C03EE /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773792110DD3B007C03EE /* ButtonView.swift */; };
+		A227739C2110DD3B007C03EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A227737B2110DD3B007C03EE /* Assets.xcassets */; };
+		A227739D2110DD3B007C03EE /* Bumblebees.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A227737C2110DD3B007C03EE /* Bumblebees.xcdatamodeld */; };
+		A227739E2110DD3B007C03EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A227737E2110DD3B007C03EE /* LaunchScreen.storyboard */; };
+		A227739F2110DD3B007C03EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A22773802110DD3B007C03EE /* Main.storyboard */; };
+		A22773A02110DD3B007C03EE /* AppTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773832110DD3B007C03EE /* AppTextView.swift */; };
+		A22773A12110DD3B007C03EE /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773842110DD3B007C03EE /* AppTextField.swift */; };
+		A22773A22110DD3B007C03EE /* AppTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773852110DD3B007C03EE /* AppTabBarController.swift */; };
+		A22773A32110DD3B007C03EE /* AppTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773862110DD3B007C03EE /* AppTableView.swift */; };
+		A22773A42110DD3B007C03EE /* AppLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773872110DD3B007C03EE /* AppLabel.swift */; };
+		A22773A52110DD3B007C03EE /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773882110DD3B007C03EE /* AppTableViewCell.swift */; };
+		A22773A62110DD3B007C03EE /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773892110DD3B007C03EE /* AppNavigationController.swift */; };
+		A22773A72110DD3B007C03EE /* EntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227738B2110DD3B007C03EE /* EntryVC.swift */; };
+		A22773A82110DD3B007C03EE /* ExportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227738C2110DD3B007C03EE /* ExportCell.swift */; };
 		D29AD87ED389EEFF6B38A130 /* Pods_Bumblebees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +59,43 @@
 		A22773502110DCAC007C03EE /* Theming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
 		A22773512110DCAC007C03EE /* AppThemeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppThemeProvider.swift; sourceTree = "<group>"; };
 		A22773522110DCAC007C03EE /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
-		A22773562110DCE8007C03EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A22773592110DD26007C03EE /* LabBook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabBook.swift; sourceTree = "<group>"; };
+		A227735A2110DD26007C03EE /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		A227735B2110DD26007C03EE /* FlowerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowerData.swift; sourceTree = "<group>"; };
+		A227735C2110DD26007C03EE /* NameProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameProvider.swift; sourceTree = "<group>"; };
+		A227735D2110DD26007C03EE /* BeeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeeData.swift; sourceTree = "<group>"; };
+		A227735E2110DD26007C03EE /* LabBookEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabBookEntry.swift; sourceTree = "<group>"; };
+		A227735F2110DD26007C03EE /* ObjectStudied.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectStudied.swift; sourceTree = "<group>"; };
+		A22773682110DD3B007C03EE /* AddLabBookEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddLabBookEntryVC.swift; sourceTree = "<group>"; };
+		A227736A2110DD3B007C03EE /* EditObjectVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditObjectVC.swift; sourceTree = "<group>"; };
+		A227736C2110DD3B007C03EE /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		A227736D2110DD3B007C03EE /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A227736E2110DD3B007C03EE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A227736F2110DD3B007C03EE /* SubscribableValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribableValue.swift; sourceTree = "<group>"; };
+		A22773702110DD3B007C03EE /* ProtocolsAndExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProtocolsAndExtensions.swift; sourceTree = "<group>"; };
+		A22773712110DD3B007C03EE /* DataExportHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExportHelpers.swift; sourceTree = "<group>"; };
+		A22773722110DD3B007C03EE /* Weak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weak.swift; sourceTree = "<group>"; };
+		A22773742110DD3B007C03EE /* ExperimentLogicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentLogicController.swift; sourceTree = "<group>"; };
+		A22773752110DD3B007C03EE /* ObjectsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectsTableView.swift; sourceTree = "<group>"; };
+		A22773762110DD3B007C03EE /* ExperimentSetupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentSetupVC.swift; sourceTree = "<group>"; };
+		A22773772110DD3B007C03EE /* ExperimentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentVC.swift; sourceTree = "<group>"; };
+		A22773782110DD3B007C03EE /* ObjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectCell.swift; sourceTree = "<group>"; };
+		A22773792110DD3B007C03EE /* ButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		A227737B2110DD3B007C03EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A227737D2110DD3B007C03EE /* Bumblebees.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bumblebees.xcdatamodel; sourceTree = "<group>"; };
+		A227737F2110DD3B007C03EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A22773812110DD3B007C03EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A22773832110DD3B007C03EE /* AppTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextView.swift; sourceTree = "<group>"; };
+		A22773842110DD3B007C03EE /* AppTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
+		A22773852110DD3B007C03EE /* AppTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTabBarController.swift; sourceTree = "<group>"; };
+		A22773862110DD3B007C03EE /* AppTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTableView.swift; sourceTree = "<group>"; };
+		A22773872110DD3B007C03EE /* AppLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppLabel.swift; sourceTree = "<group>"; };
+		A22773882110DD3B007C03EE /* AppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
+		A22773892110DD3B007C03EE /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		A227738B2110DD3B007C03EE /* EntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryVC.swift; sourceTree = "<group>"; };
+		A227738C2110DD3B007C03EE /* ExportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportCell.swift; sourceTree = "<group>"; };
 		A2CEC56F2110D8EE00684926 /* Bumblebees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumblebees.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2D9E86A2110DE610080897B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +129,104 @@
 			path = Theming;
 			sourceTree = "<group>";
 		};
+		A22773582110DD26007C03EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A22773592110DD26007C03EE /* LabBook.swift */,
+				A227735A2110DD26007C03EE /* Event.swift */,
+				A227735B2110DD26007C03EE /* FlowerData.swift */,
+				A227735C2110DD26007C03EE /* NameProvider.swift */,
+				A227735D2110DD26007C03EE /* BeeData.swift */,
+				A227735E2110DD26007C03EE /* LabBookEntry.swift */,
+				A227735F2110DD26007C03EE /* ObjectStudied.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A22773672110DD3B007C03EE /* Add Lab Book Entry VC */ = {
+			isa = PBXGroup;
+			children = (
+				A22773682110DD3B007C03EE /* AddLabBookEntryVC.swift */,
+			);
+			path = "Add Lab Book Entry VC";
+			sourceTree = "<group>";
+		};
+		A22773692110DD3B007C03EE /* Edit Object VC */ = {
+			isa = PBXGroup;
+			children = (
+				A227736A2110DD3B007C03EE /* EditObjectVC.swift */,
+			);
+			path = "Edit Object VC";
+			sourceTree = "<group>";
+		};
+		A227736B2110DD3B007C03EE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A227736C2110DD3B007C03EE /* Stack.swift */,
+				A227736D2110DD3B007C03EE /* Result.swift */,
+				A227736E2110DD3B007C03EE /* AppDelegate.swift */,
+				A227736F2110DD3B007C03EE /* SubscribableValue.swift */,
+				A22773702110DD3B007C03EE /* ProtocolsAndExtensions.swift */,
+				A22773712110DD3B007C03EE /* DataExportHelpers.swift */,
+				A22773722110DD3B007C03EE /* Weak.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		A22773732110DD3B007C03EE /* Visit Experiment */ = {
+			isa = PBXGroup;
+			children = (
+				A22773742110DD3B007C03EE /* ExperimentLogicController.swift */,
+				A22773752110DD3B007C03EE /* ObjectsTableView.swift */,
+				A22773762110DD3B007C03EE /* ExperimentSetupVC.swift */,
+				A22773772110DD3B007C03EE /* ExperimentVC.swift */,
+				A22773782110DD3B007C03EE /* ObjectCell.swift */,
+				A22773792110DD3B007C03EE /* ButtonView.swift */,
+			);
+			path = "Visit Experiment";
+			sourceTree = "<group>";
+		};
+		A227737A2110DD3B007C03EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A227737B2110DD3B007C03EE /* Assets.xcassets */,
+				A227737C2110DD3B007C03EE /* Bumblebees.xcdatamodeld */,
+				A227737E2110DD3B007C03EE /* LaunchScreen.storyboard */,
+				A22773802110DD3B007C03EE /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A22773822110DD3B007C03EE /* Themed Subclasses and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A22773832110DD3B007C03EE /* AppTextView.swift */,
+				A22773842110DD3B007C03EE /* AppTextField.swift */,
+				A22773852110DD3B007C03EE /* AppTabBarController.swift */,
+				A22773862110DD3B007C03EE /* AppTableView.swift */,
+				A22773872110DD3B007C03EE /* AppLabel.swift */,
+				A22773882110DD3B007C03EE /* AppTableViewCell.swift */,
+				A22773892110DD3B007C03EE /* AppNavigationController.swift */,
+			);
+			path = "Themed Subclasses and Extensions";
+			sourceTree = "<group>";
+		};
+		A227738A2110DD3B007C03EE /* Start VC */ = {
+			isa = PBXGroup;
+			children = (
+				A227738B2110DD3B007C03EE /* EntryVC.swift */,
+				A227738C2110DD3B007C03EE /* ExportCell.swift */,
+			);
+			path = "Start VC";
+			sourceTree = "<group>";
+		};
 		A2CEC5662110D8EE00684926 = {
 			isa = PBXGroup;
 			children = (
-				A2CEC5712110D8EE00684926 /* Bumblebees */,
-				A22773562110DCE8007C03EE /* Info.plist */,
 				A2CEC5702110D8EE00684926 /* Products */,
 				EA2554A589686F108EDE4EC1 /* Pods */,
 				A35208BB14D3A46F5FF27B19 /* Frameworks */,
+				A2CEC5712110D8EE00684926 /* Bumblebees */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,8 +241,17 @@
 		A2CEC5712110D8EE00684926 /* Bumblebees */ = {
 			isa = PBXGroup;
 			children = (
-				A227734A2110DC9E007C03EE /* Renderer and LogicController */,
+				A2D9E86A2110DE610080897B /* Info.plist */,
 				A227734F2110DCAC007C03EE /* Theming */,
+				A22773582110DD26007C03EE /* Model */,
+				A22773672110DD3B007C03EE /* Add Lab Book Entry VC */,
+				A22773692110DD3B007C03EE /* Edit Object VC */,
+				A227737A2110DD3B007C03EE /* Resources */,
+				A227736B2110DD3B007C03EE /* Shared */,
+				A227738A2110DD3B007C03EE /* Start VC */,
+				A22773822110DD3B007C03EE /* Themed Subclasses and Extensions */,
+				A22773732110DD3B007C03EE /* Visit Experiment */,
+				A227734A2110DC9E007C03EE /* Renderer and LogicController */,
 			);
 			path = Bumblebees;
 			sourceTree = "<group>";
@@ -165,7 +333,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A22773572110DCE8007C03EE /* Info.plist in Resources */,
+				A227739E2110DD3B007C03EE /* LaunchScreen.storyboard in Resources */,
+				A227739C2110DD3B007C03EE /* Assets.xcassets in Resources */,
+				A227739F2110DD3B007C03EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,14 +388,65 @@
 			buildActionMask = 2147483647;
 			files = (
 				A22773542110DCAC007C03EE /* AppThemeProvider.swift in Sources */,
+				A227738F2110DD3B007C03EE /* Stack.swift in Sources */,
+				A22773932110DD3B007C03EE /* ProtocolsAndExtensions.swift in Sources */,
+				A22773A72110DD3B007C03EE /* EntryVC.swift in Sources */,
+				A22773962110DD3B007C03EE /* ExperimentLogicController.swift in Sources */,
+				A22773652110DD26007C03EE /* LabBookEntry.swift in Sources */,
+				A22773632110DD26007C03EE /* NameProvider.swift in Sources */,
+				A22773942110DD3B007C03EE /* DataExportHelpers.swift in Sources */,
 				A22773532110DCAC007C03EE /* Theming.swift in Sources */,
+				A227739B2110DD3B007C03EE /* ButtonView.swift in Sources */,
+				A22773602110DD26007C03EE /* LabBook.swift in Sources */,
+				A22773902110DD3B007C03EE /* Result.swift in Sources */,
 				A227734D2110DC9F007C03EE /* LogicController.swift in Sources */,
+				A22773622110DD26007C03EE /* FlowerData.swift in Sources */,
+				A227738E2110DD3B007C03EE /* EditObjectVC.swift in Sources */,
+				A22773A62110DD3B007C03EE /* AppNavigationController.swift in Sources */,
+				A22773662110DD26007C03EE /* ObjectStudied.swift in Sources */,
 				A22773552110DCAC007C03EE /* AppTheme.swift in Sources */,
+				A22773992110DD3B007C03EE /* ExperimentVC.swift in Sources */,
+				A22773A52110DD3B007C03EE /* AppTableViewCell.swift in Sources */,
+				A22773A32110DD3B007C03EE /* AppTableView.swift in Sources */,
+				A22773612110DD26007C03EE /* Event.swift in Sources */,
+				A22773972110DD3B007C03EE /* ObjectsTableView.swift in Sources */,
+				A227739A2110DD3B007C03EE /* ObjectCell.swift in Sources */,
+				A22773A82110DD3B007C03EE /* ExportCell.swift in Sources */,
+				A22773642110DD26007C03EE /* BeeData.swift in Sources */,
 				A227734E2110DC9F007C03EE /* Renderer.swift in Sources */,
+				A22773912110DD3B007C03EE /* AppDelegate.swift in Sources */,
+				A22773922110DD3B007C03EE /* SubscribableValue.swift in Sources */,
+				A22773982110DD3B007C03EE /* ExperimentSetupVC.swift in Sources */,
+				A227739D2110DD3B007C03EE /* Bumblebees.xcdatamodeld in Sources */,
+				A227738D2110DD3B007C03EE /* AddLabBookEntryVC.swift in Sources */,
+				A22773A22110DD3B007C03EE /* AppTabBarController.swift in Sources */,
+				A22773A02110DD3B007C03EE /* AppTextView.swift in Sources */,
+				A22773952110DD3B007C03EE /* Weak.swift in Sources */,
+				A22773A42110DD3B007C03EE /* AppLabel.swift in Sources */,
+				A22773A12110DD3B007C03EE /* AppTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A227737E2110DD3B007C03EE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A227737F2110DD3B007C03EE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A22773802110DD3B007C03EE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A22773812110DD3B007C03EE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A2CEC5822110D8EF00684926 /* Debug */ = {
@@ -279,7 +500,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -333,7 +554,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -402,6 +623,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A227737C2110DD3B007C03EE /* Bumblebees.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A227737D2110DD3B007C03EE /* Bumblebees.xcdatamodel */,
+			);
+			currentVersion = A227737D2110DD3B007C03EE /* Bumblebees.xcdatamodel */;
+			path = Bumblebees.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A2CEC5672110D8EE00684926 /* Project object */;
 }

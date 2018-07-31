@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "08E0389C6DE55E061076978D0FDE4134"
-               BuildableName = "Pods_Bumblebees.framework"
-               BlueprintName = "Pods-Bumblebees"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "A2CEC56E2110D8EE00684926"
+               BuildableName = "Bumblebees.app"
+               BlueprintName = "Bumblebees"
+               ReferencedContainer = "container:Bumblebees.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A2CEC56E2110D8EE00684926"
+            BuildableName = "Bumblebees.app"
+            BlueprintName = "Bumblebees"
+            ReferencedContainer = "container:Bumblebees.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,15 +51,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "08E0389C6DE55E061076978D0FDE4134"
-            BuildableName = "Pods_Bumblebees.framework"
-            BlueprintName = "Pods-Bumblebees"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "A2CEC56E2110D8EE00684926"
+            BuildableName = "Bumblebees.app"
+            BlueprintName = "Bumblebees"
+            ReferencedContainer = "container:Bumblebees.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -60,6 +70,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "A2CEC56E2110D8EE00684926"
+            BuildableName = "Bumblebees.app"
+            BlueprintName = "Bumblebees"
+            ReferencedContainer = "container:Bumblebees.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

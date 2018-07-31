@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17E202" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Bee" representedClassName=".Bee" syncable="YES">
+        <attribute name="comment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="flowerVisits" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="FlowerVisit" inverseName="owningBee" inverseEntity="FlowerVisit" syncable="YES"/>
+    </entity>
+    <entity name="FlowerVisit" representedClassName=".FlowerVisit" syncable="YES">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="flowerIndex" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="owningBee" maxCount="1" deletionRule="Nullify" destinationEntity="Bee" inverseName="flowerVisits" inverseEntity="Bee" syncable="YES"/>
+    </entity>
+    <entity name="LabBook" representedClassName=".LabBook" syncable="YES">
+        <relationship name="entries" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LabBookEntry" inverseName="labBook" inverseEntity="LabBookEntry" syncable="YES"/>
+    </entity>
+    <entity name="LabBookEntry" representedClassName=".LabBookEntry" syncable="YES">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="text" attributeType="String" syncable="YES"/>
+        <relationship name="labBook" maxCount="1" deletionRule="Nullify" destinationEntity="LabBook" inverseName="entries" inverseEntity="LabBook" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Bee" positionX="-45" positionY="0" width="128" height="105"/>
+        <element name="FlowerVisit" positionX="-18" positionY="27" width="128" height="90"/>
+        <element name="LabBook" positionX="-27" positionY="45" width="128" height="60"/>
+        <element name="LabBookEntry" positionX="-18" positionY="54" width="128" height="90"/>
+    </elements>
+</model>
