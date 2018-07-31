@@ -33,7 +33,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                                     <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <prototypes>
-                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="objectCell" textLabel="SLJ-yn-29v" style="IBUITableViewCellStyleDefault" id="6aq-qZ-SAa" customClass="ObjectCell" customModule="Bumblebees" customModuleProvider="target">
+                                                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="detailDisclosureButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="objectCell" textLabel="SLJ-yn-29v" style="IBUITableViewCellStyleDefault" id="6aq-qZ-SAa" customClass="ObjectCell" customModule="Bumblebees" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6aq-qZ-SAa" id="5v3-c9-8oT">
@@ -133,10 +133,10 @@
                                 <rect key="frame" x="8" y="118" width="398" height="610"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bUZ-D6-BYK">
-                                        <rect key="frame" x="0.0" y="0.0" width="398" height="519"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="525.33333333333337"/>
                                         <subviews>
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="re0-T7-5Gs" customClass="ButtonView" customModule="Bumblebees" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="195" height="519"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="195" height="525.33333333333337"/>
                                                 <color key="backgroundColor" red="0.66666666666666663" green="0.83137254901960789" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="landed"/>
@@ -146,7 +146,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4M-g3-RlH" customClass="ButtonView" customModule="Bumblebees" customModuleProvider="target">
-                                                <rect key="frame" x="203" y="0.0" width="195" height="519"/>
+                                                <rect key="frame" x="203" y="0.0" width="195" height="525.33333333333337"/>
                                                 <color key="backgroundColor" red="0.80000000000000004" green="0.94509803921568625" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="landed"/>
@@ -158,7 +158,7 @@
                                         </subviews>
                                     </stackView>
                                     <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7t-37-fLg" customClass="ButtonView" customModule="Bumblebees" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="527" width="398" height="83"/>
+                                        <rect key="frame" x="0.0" y="533.33333333333337" width="398" height="76.666666666666629"/>
                                         <color key="backgroundColor" red="0.97305089239999998" green="0.83261032319999995" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="title" value="Undo"/>
