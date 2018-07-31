@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A227734D2110DC9F007C03EE /* LogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227734B2110DC9E007C03EE /* LogicController.swift */; };
+		A227734E2110DC9F007C03EE /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227734C2110DC9E007C03EE /* Renderer.swift */; };
+		A22773532110DCAC007C03EE /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773502110DCAC007C03EE /* Theming.swift */; };
+		A22773542110DCAC007C03EE /* AppThemeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773512110DCAC007C03EE /* AppThemeProvider.swift */; };
+		A22773552110DCAC007C03EE /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773522110DCAC007C03EE /* AppTheme.swift */; };
 		A2CEC5732110D8EE00684926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEC5722110D8EE00684926 /* AppDelegate.swift */; };
 		A2CEC5752110D8EE00684926 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEC5742110D8EE00684926 /* ViewController.swift */; };
 		A2CEC5782110D8EE00684926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CEC5762110D8EE00684926 /* Main.storyboard */; };
@@ -20,6 +25,11 @@
 		2E4BE2A735F5B1081AA4E149 /* Pods-Bumblebees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebees.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees.release.xcconfig"; sourceTree = "<group>"; };
 		6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bumblebees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		92F7FC4D1C280A7DBD2BE462 /* Pods-Bumblebees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees.debug.xcconfig"; sourceTree = "<group>"; };
+		A227734B2110DC9E007C03EE /* LogicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicController.swift; sourceTree = "<group>"; };
+		A227734C2110DC9E007C03EE /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
+		A22773502110DCAC007C03EE /* Theming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
+		A22773512110DCAC007C03EE /* AppThemeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppThemeProvider.swift; sourceTree = "<group>"; };
+		A22773522110DCAC007C03EE /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		A2CEC56F2110D8EE00684926 /* Bumblebees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumblebees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2CEC5722110D8EE00684926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2CEC5742110D8EE00684926 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,7 +37,6 @@
 		A2CEC57A2110D8EE00684926 /* Bumblebees.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bumblebees.xcdatamodel; sourceTree = "<group>"; };
 		A2CEC57C2110D8EF00684926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2CEC57F2110D8EF00684926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A2CEC5812110D8EF00684926 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +51,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A227734A2110DC9E007C03EE /* Renderer and LogicController */ = {
+			isa = PBXGroup;
+			children = (
+				A227734B2110DC9E007C03EE /* LogicController.swift */,
+				A227734C2110DC9E007C03EE /* Renderer.swift */,
+			);
+			path = "Renderer and LogicController";
+			sourceTree = "<group>";
+		};
+		A227734F2110DCAC007C03EE /* Theming */ = {
+			isa = PBXGroup;
+			children = (
+				A22773502110DCAC007C03EE /* Theming.swift */,
+				A22773512110DCAC007C03EE /* AppThemeProvider.swift */,
+				A22773522110DCAC007C03EE /* AppTheme.swift */,
+			);
+			path = Theming;
+			sourceTree = "<group>";
+		};
 		A2CEC5662110D8EE00684926 = {
 			isa = PBXGroup;
 			children = (
@@ -63,12 +91,13 @@
 		A2CEC5712110D8EE00684926 /* Bumblebees */ = {
 			isa = PBXGroup;
 			children = (
+				A227734A2110DC9E007C03EE /* Renderer and LogicController */,
+				A227734F2110DCAC007C03EE /* Theming */,
 				A2CEC5722110D8EE00684926 /* AppDelegate.swift */,
 				A2CEC5742110D8EE00684926 /* ViewController.swift */,
 				A2CEC5762110D8EE00684926 /* Main.storyboard */,
 				A2CEC57C2110D8EF00684926 /* Assets.xcassets */,
 				A2CEC57E2110D8EF00684926 /* LaunchScreen.storyboard */,
-				A2CEC5812110D8EF00684926 /* Info.plist */,
 				A2CEC5792110D8EE00684926 /* Bumblebees.xcdatamodeld */,
 			);
 			path = Bumblebees;
@@ -205,8 +234,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A22773542110DCAC007C03EE /* AppThemeProvider.swift in Sources */,
 				A2CEC57B2110D8EE00684926 /* Bumblebees.xcdatamodeld in Sources */,
 				A2CEC5752110D8EE00684926 /* ViewController.swift in Sources */,
+				A22773532110DCAC007C03EE /* Theming.swift in Sources */,
+				A227734D2110DC9F007C03EE /* LogicController.swift in Sources */,
+				A22773552110DCAC007C03EE /* AppTheme.swift in Sources */,
+				A227734E2110DC9F007C03EE /* Renderer.swift in Sources */,
 				A2CEC5732110D8EE00684926 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
