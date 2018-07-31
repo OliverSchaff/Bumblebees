@@ -12,12 +12,7 @@
 		A22773532110DCAC007C03EE /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773502110DCAC007C03EE /* Theming.swift */; };
 		A22773542110DCAC007C03EE /* AppThemeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773512110DCAC007C03EE /* AppThemeProvider.swift */; };
 		A22773552110DCAC007C03EE /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773522110DCAC007C03EE /* AppTheme.swift */; };
-		A2CEC5732110D8EE00684926 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEC5722110D8EE00684926 /* AppDelegate.swift */; };
-		A2CEC5752110D8EE00684926 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEC5742110D8EE00684926 /* ViewController.swift */; };
-		A2CEC5782110D8EE00684926 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CEC5762110D8EE00684926 /* Main.storyboard */; };
-		A2CEC57B2110D8EE00684926 /* Bumblebees.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A2CEC5792110D8EE00684926 /* Bumblebees.xcdatamodeld */; };
-		A2CEC57D2110D8EF00684926 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2CEC57C2110D8EF00684926 /* Assets.xcassets */; };
-		A2CEC5802110D8EF00684926 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2CEC57E2110D8EF00684926 /* LaunchScreen.storyboard */; };
+		A22773572110DCE8007C03EE /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A22773562110DCE8007C03EE /* Info.plist */; };
 		D29AD87ED389EEFF6B38A130 /* Pods_Bumblebees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */; };
 /* End PBXBuildFile section */
 
@@ -30,13 +25,8 @@
 		A22773502110DCAC007C03EE /* Theming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
 		A22773512110DCAC007C03EE /* AppThemeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppThemeProvider.swift; sourceTree = "<group>"; };
 		A22773522110DCAC007C03EE /* AppTheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		A22773562110DCE8007C03EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2CEC56F2110D8EE00684926 /* Bumblebees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumblebees.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2CEC5722110D8EE00684926 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A2CEC5742110D8EE00684926 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A2CEC5772110D8EE00684926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A2CEC57A2110D8EE00684926 /* Bumblebees.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bumblebees.xcdatamodel; sourceTree = "<group>"; };
-		A2CEC57C2110D8EF00684926 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A2CEC57F2110D8EF00684926 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				A2CEC5712110D8EE00684926 /* Bumblebees */,
+				A22773562110DCE8007C03EE /* Info.plist */,
 				A2CEC5702110D8EE00684926 /* Products */,
 				EA2554A589686F108EDE4EC1 /* Pods */,
 				A35208BB14D3A46F5FF27B19 /* Frameworks */,
@@ -93,12 +84,6 @@
 			children = (
 				A227734A2110DC9E007C03EE /* Renderer and LogicController */,
 				A227734F2110DCAC007C03EE /* Theming */,
-				A2CEC5722110D8EE00684926 /* AppDelegate.swift */,
-				A2CEC5742110D8EE00684926 /* ViewController.swift */,
-				A2CEC5762110D8EE00684926 /* Main.storyboard */,
-				A2CEC57C2110D8EF00684926 /* Assets.xcassets */,
-				A2CEC57E2110D8EF00684926 /* LaunchScreen.storyboard */,
-				A2CEC5792110D8EE00684926 /* Bumblebees.xcdatamodeld */,
 			);
 			path = Bumblebees;
 			sourceTree = "<group>";
@@ -180,9 +165,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2CEC5802110D8EF00684926 /* LaunchScreen.storyboard in Resources */,
-				A2CEC57D2110D8EF00684926 /* Assets.xcassets in Resources */,
-				A2CEC5782110D8EE00684926 /* Main.storyboard in Resources */,
+				A22773572110DCE8007C03EE /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,36 +218,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				A22773542110DCAC007C03EE /* AppThemeProvider.swift in Sources */,
-				A2CEC57B2110D8EE00684926 /* Bumblebees.xcdatamodeld in Sources */,
-				A2CEC5752110D8EE00684926 /* ViewController.swift in Sources */,
 				A22773532110DCAC007C03EE /* Theming.swift in Sources */,
 				A227734D2110DC9F007C03EE /* LogicController.swift in Sources */,
 				A22773552110DCAC007C03EE /* AppTheme.swift in Sources */,
 				A227734E2110DC9F007C03EE /* Renderer.swift in Sources */,
-				A2CEC5732110D8EE00684926 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A2CEC5762110D8EE00684926 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A2CEC5772110D8EE00684926 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A2CEC57E2110D8EF00684926 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A2CEC57F2110D8EF00684926 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A2CEC5822110D8EF00684926 /* Debug */ = {
@@ -441,19 +402,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		A2CEC5792110D8EE00684926 /* Bumblebees.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				A2CEC57A2110D8EE00684926 /* Bumblebees.xcdatamodel */,
-			);
-			currentVersion = A2CEC57A2110D8EE00684926 /* Bumblebees.xcdatamodel */;
-			path = Bumblebees.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = A2CEC5672110D8EE00684926 /* Project object */;
 }
