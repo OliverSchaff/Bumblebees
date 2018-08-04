@@ -47,6 +47,7 @@
 		A22773A62110DD3B007C03EE /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773892110DD3B007C03EE /* AppNavigationController.swift */; };
 		A22773A72110DD3B007C03EE /* EntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227738B2110DD3B007C03EE /* EntryVC.swift */; };
 		A22773A82110DD3B007C03EE /* ExportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227738C2110DD3B007C03EE /* ExportCell.swift */; };
+		A2462E3C2115A8640016ADC8 /* Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png in Resources */ = {isa = PBXBuildFile; fileRef = A2462E3B2115A8640016ADC8 /* Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png */; };
 		A26109A121122D4B005C8E6A /* AppIcon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = A26109A021122D4B005C8E6A /* AppIcon1024.png */; };
 		D29AD87ED389EEFF6B38A130 /* Pods_Bumblebees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */; };
 /* End PBXBuildFile section */
@@ -95,6 +96,7 @@
 		A22773892110DD3B007C03EE /* AppNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
 		A227738B2110DD3B007C03EE /* EntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntryVC.swift; sourceTree = "<group>"; };
 		A227738C2110DD3B007C03EE /* ExportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportCell.swift; sourceTree = "<group>"; };
+		A2462E3B2115A8640016ADC8 /* Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png"; path = "../../../Desktop/Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png"; sourceTree = "<group>"; };
 		A26109A021122D4B005C8E6A /* AppIcon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon1024.png; sourceTree = "<group>"; };
 		A2CEC56F2110D8EE00684926 /* Bumblebees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumblebees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D9E86A2110DE610080897B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				A26109A021122D4B005C8E6A /* AppIcon1024.png */,
+				A2462E3B2115A8640016ADC8 /* Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png */,
 				A2CEC5702110D8EE00684926 /* Products */,
 				EA2554A589686F108EDE4EC1 /* Pods */,
 				A35208BB14D3A46F5FF27B19 /* Frameworks */,
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A227739E2110DD3B007C03EE /* LaunchScreen.storyboard in Resources */,
+				A2462E3C2115A8640016ADC8 /* Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png in Resources */,
 				A227739C2110DD3B007C03EE /* Assets.xcassets in Resources */,
 				A227739F2110DD3B007C03EE /* Main.storyboard in Resources */,
 				A26109A121122D4B005C8E6A /* AppIcon1024.png in Resources */,
