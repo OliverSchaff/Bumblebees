@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import Bumblebees
 
 class BumblebeesUnitTests: XCTestCase {
     
@@ -20,9 +21,28 @@ class BumblebeesUnitTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testStackPush() {
+        var stack = Stack<Int>()
+        let a = 1
+        stack.push(a)
+        XCTAssert(!stack.items.isEmpty, "stack.push not working")
+        XCTAssert(stack.items.last! == a, "stack push not working")
+    }
+    
+    func testStackPull() {
+        var stack = Stack<Int>()
+        let a = 1
+        stack.push(a)
+        let aa = stack.pop()
+        XCTAssert(a == aa, "stack.pop not working")
+    }
+    
+    func testStackPeek() {
+        var stack = Stack<Int>()
+        let a = 1
+        stack.push(a)
+        let ap = stack.peek()
+        XCTAssert(a == ap, "stack.peek not working")
     }
     
     func testPerformanceExample() {
