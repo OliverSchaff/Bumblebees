@@ -1,4 +1,9 @@
 # Bumblebees
+
+img {
+    border-radius: 10px 0 0 0;
+}
+
 <p align="left">
 <img src="https://github.com/OliverSchaff/Bumblebees/blob/master/Bumblebees/AppIcon1024.png" width=100px alt="Bumblebees" title="Bublebees">
 </p>
