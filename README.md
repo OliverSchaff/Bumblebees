@@ -10,5 +10,5 @@ Unfortunately, there is no Android app yet...
 
 This is the main experiment page, where we track the insects actions with time-stamped events.
 <p align="center">
-<img src="https://github.com/OliverSchaff/Bumblebees/blob/versionWithRealm/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-07-29%20at%2018.09.19.png" height=500px alt="Bumblebees" title="Bublebees">
+<img src="https://github.com/OliverSchaff/Bumblebees/blob/master/Bumblebees/Simulator%20Screen%20Shot%20-%20iPhone%208%20Plus%20-%202018-07-29%20at%2018.09.19.png" height=500px alt="Bumblebees" title="Bublebees">
 </p>
