@@ -48,9 +48,20 @@
 		A22773A72110DD3B007C03EE /* EntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227738B2110DD3B007C03EE /* EntryVC.swift */; };
 		A22773A82110DD3B007C03EE /* ExportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227738C2110DD3B007C03EE /* ExportCell.swift */; };
 		A2462E3F2115C0A30016ADC8 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2462E3E2115C0A30016ADC8 /* License.txt */; };
+		A2462E552115C9080016ADC8 /* BumblebeesUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2462E542115C9080016ADC8 /* BumblebeesUnitTests.swift */; };
 		A26109A121122D4B005C8E6A /* AppIcon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = A26109A021122D4B005C8E6A /* AppIcon1024.png */; };
 		D29AD87ED389EEFF6B38A130 /* Pods_Bumblebees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A2462E572115C9080016ADC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2CEC5672110D8EE00684926 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2CEC56E2110D8EE00684926;
+			remoteInfo = Bumblebees;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2E4BE2A735F5B1081AA4E149 /* Pods-Bumblebees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebees.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,12 +109,22 @@
 		A227738C2110DD3B007C03EE /* ExportCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportCell.swift; sourceTree = "<group>"; };
 		A2462E3D2115A9530016ADC8 /* Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png"; sourceTree = "<group>"; };
 		A2462E3E2115C0A30016ADC8 /* License.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = License.txt; sourceTree = "<group>"; };
+		A2462E522115C9080016ADC8 /* BumblebeesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumblebeesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2462E542115C9080016ADC8 /* BumblebeesUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumblebeesUnitTests.swift; sourceTree = "<group>"; };
+		A2462E562115C9080016ADC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A26109A021122D4B005C8E6A /* AppIcon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon1024.png; sourceTree = "<group>"; };
 		A2CEC56F2110D8EE00684926 /* Bumblebees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumblebees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D9E86A2110DE610080897B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A2462E4F2115C9080016ADC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2CEC56C2110D8EE00684926 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,9 +246,19 @@
 			path = "Start VC";
 			sourceTree = "<group>";
 		};
+		A2462E532115C9080016ADC8 /* BumblebeesUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				A2462E542115C9080016ADC8 /* BumblebeesUnitTests.swift */,
+				A2462E562115C9080016ADC8 /* Info.plist */,
+			);
+			path = BumblebeesUnitTests;
+			sourceTree = "<group>";
+		};
 		A2CEC5662110D8EE00684926 = {
 			isa = PBXGroup;
 			children = (
+				A2462E532115C9080016ADC8 /* BumblebeesUnitTests */,
 				A2CEC5702110D8EE00684926 /* Products */,
 				EA2554A589686F108EDE4EC1 /* Pods */,
 				A35208BB14D3A46F5FF27B19 /* Frameworks */,
@@ -239,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				A2CEC56F2110D8EE00684926 /* Bumblebees.app */,
+				A2462E522115C9080016ADC8 /* BumblebeesUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -284,6 +316,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A2462E512115C9080016ADC8 /* BumblebeesUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2462E592115C9080016ADC8 /* Build configuration list for PBXNativeTarget "BumblebeesUnitTests" */;
+			buildPhases = (
+				A2462E4E2115C9080016ADC8 /* Sources */,
+				A2462E4F2115C9080016ADC8 /* Frameworks */,
+				A2462E502115C9080016ADC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2462E582115C9080016ADC8 /* PBXTargetDependency */,
+			);
+			name = BumblebeesUnitTests;
+			productName = BumblebeesUnitTests;
+			productReference = A2462E522115C9080016ADC8 /* BumblebeesUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A2CEC56E2110D8EE00684926 /* Bumblebees */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2CEC5842110D8EF00684926 /* Build configuration list for PBXNativeTarget "Bumblebees" */;
@@ -313,6 +363,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Oliver Schaff";
 				TargetAttributes = {
+					A2462E512115C9080016ADC8 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = A2CEC56E2110D8EE00684926;
+					};
 					A2CEC56E2110D8EE00684926 = {
 						CreatedOnToolsVersion = 9.4;
 					};
@@ -332,11 +386,19 @@
 			projectRoot = "";
 			targets = (
 				A2CEC56E2110D8EE00684926 /* Bumblebees */,
+				A2462E512115C9080016ADC8 /* BumblebeesUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A2462E502115C9080016ADC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2CEC56D2110D8EE00684926 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,6 +455,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A2462E4E2115C9080016ADC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2462E552115C9080016ADC8 /* BumblebeesUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2CEC56B2110D8EE00684926 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,6 +509,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		A2462E582115C9080016ADC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2CEC56E2110D8EE00684926 /* Bumblebees */;
+			targetProxy = A2462E572115C9080016ADC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		A227737E2110DD3B007C03EE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -459,6 +537,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A2462E5A2115C9080016ADC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 487Y8AH89Y;
+				INFOPLIST_FILE = BumblebeesUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shaluluberlin.training.BumblebeesUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bumblebees.app/Bumblebees";
+			};
+			name = Debug;
+		};
+		A2462E5B2115C9080016ADC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 487Y8AH89Y;
+				INFOPLIST_FILE = BumblebeesUnitTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shaluluberlin.training.BumblebeesUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bumblebees.app/Bumblebees";
+			};
+			name = Release;
+		};
 		A2CEC5822110D8EF00684926 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -614,6 +734,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A2462E592115C9080016ADC8 /* Build configuration list for PBXNativeTarget "BumblebeesUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2462E5A2115C9080016ADC8 /* Debug */,
+				A2462E5B2115C9080016ADC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A2CEC56A2110D8EE00684926 /* Build configuration list for PBXProject "Bumblebees" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
