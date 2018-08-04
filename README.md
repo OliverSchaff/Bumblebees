@@ -1,6 +1,6 @@
 # Bumblebees
-<p align="left">
-<img style="border-radius: 100px;" src="https://github.com/OliverSchaff/Bumblebees/blob/master/Bumblebees/AppIcon1024.png" width=100px alt="Bumblebees" title="Bublebees">
+<p style="border-radius: 100px;" align="left">
+<img src="https://github.com/OliverSchaff/Bumblebees/blob/master/Bumblebees/AppIcon1024.png" width=100px alt="Bumblebees" title="Bublebees">
 </p>
 
 This is the Humboldt Universität zu Berlin green house lighting experiment app for iOS.
