@@ -1,5 +1,5 @@
 # Bumblebees
-<p style="border-radius: 100px;" align="left">
+<p align="left">
 <img src="https://github.com/OliverSchaff/Bumblebees/blob/master/Bumblebees/AppIcon1024.png" width=100px alt="Bumblebees" title="Bublebees">
 </p>
 
