@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,29 +16,30 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bee" translatesAutoresizingMaskIntoConstraints="NO" id="zaP-ce-Rbs">
-                                <rect key="frame" x="37.5" y="152.5" width="300" height="362"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="zaP-ce-Rbs" secondAttribute="height" multiplier="83:100" id="DbV-G6-pjN"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HUB Bumblebees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viG-cz-jdW">
-                                <rect key="frame" x="96" y="503" width="184" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="e4M-7Y-z3E">
+                                <rect key="frame" x="62" y="98.333333333333314" width="290" height="539.33333333333348"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bee" translatesAutoresizingMaskIntoConstraints="NO" id="zaP-ce-Rbs">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="501.33333333333331"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="250" text="HUB Bumblebees" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viG-cz-jdW">
+                                        <rect key="frame" x="21" y="501.33333333333326" width="248" height="38"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" name="GreenBackground"/>
                         <constraints>
-                            <constraint firstItem="zaP-ce-Rbs" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="71B-Xs-QpS"/>
-                            <constraint firstItem="viG-cz-jdW" firstAttribute="centerX" secondItem="zaP-ce-Rbs" secondAttribute="centerX" id="BUv-Hf-mge"/>
-                            <constraint firstItem="zaP-ce-Rbs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bXf-Xx-B2m"/>
-                            <constraint firstItem="viG-cz-jdW" firstAttribute="top" secondItem="zaP-ce-Rbs" secondAttribute="bottom" constant="-11.5" id="eqp-h9-0sy"/>
-                            <constraint firstItem="zaP-ce-Rbs" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.8" id="ky7-aB-6Pg"/>
+                            <constraint firstItem="e4M-7Y-z3E" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="LRL-wk-UqJ"/>
+                            <constraint firstItem="zaP-ce-Rbs" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.7" id="f4S-pe-v0p"/>
+                            <constraint firstItem="e4M-7Y-z3E" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="tRz-Bw-7kF"/>
+                            <constraint firstItem="zaP-ce-Rbs" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.7" id="xrW-GO-XOO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
