@@ -51,7 +51,6 @@
 		A22773A82110DD3B007C03EE /* ExportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227738C2110DD3B007C03EE /* ExportCell.swift */; };
 		A2462E3F2115C0A30016ADC8 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2462E3E2115C0A30016ADC8 /* License.txt */; };
 		A2462E552115C9080016ADC8 /* BumblebeesUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2462E542115C9080016ADC8 /* BumblebeesUnitTests.swift */; };
-		A26109A121122D4B005C8E6A /* AppIcon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = A26109A021122D4B005C8E6A /* AppIcon1024.png */; };
 		D29AD87ED389EEFF6B38A130 /* Pods_Bumblebees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,7 +114,6 @@
 		A2462E522115C9080016ADC8 /* BumblebeesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumblebeesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2462E542115C9080016ADC8 /* BumblebeesUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumblebeesUnitTests.swift; sourceTree = "<group>"; };
 		A2462E562115C9080016ADC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A26109A021122D4B005C8E6A /* AppIcon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon1024.png; sourceTree = "<group>"; };
 		A2CEC56F2110D8EE00684926 /* Bumblebees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumblebees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D9E86A2110DE610080897B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2EEB1BD2115FEDF002C46EA /* Pods_Bumblebees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Bumblebees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -289,7 +287,6 @@
 		A2CEC5712110D8EE00684926 /* Bumblebees */ = {
 			isa = PBXGroup;
 			children = (
-				A26109A021122D4B005C8E6A /* AppIcon1024.png */,
 				A2462E3D2115A9530016ADC8 /* Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png */,
 				A2D9E86A2110DE610080897B /* Info.plist */,
 				A2462E3E2115C0A30016ADC8 /* License.txt */,
@@ -427,7 +424,6 @@
 				A2462E3F2115C0A30016ADC8 /* License.txt in Resources */,
 				A227739C2110DD3B007C03EE /* Assets.xcassets in Resources */,
 				A227739F2110DD3B007C03EE /* Main.storyboard in Resources */,
-				A26109A121122D4B005C8E6A /* AppIcon1024.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
