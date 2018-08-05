@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import RealmSwift
 @testable import Bumblebees
 
 class BumblebeesUnitTests: XCTestCase {
@@ -45,11 +46,48 @@ class BumblebeesUnitTests: XCTestCase {
         XCTAssert(a == ap, "stack.peek not working")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testLabBookPersistence() {
+        let realm = try! Realm()
+        if let oldLabBook = realm.object(ofType: LabBook.self, forPrimaryKey: "myBeesExperimentLabBook") {
+            try! realm.write {
+                realm.delete(oldLabBook)
+            }
+        }
+        let labBook = realm.object(ofType: LabBook.self, forPrimaryKey: "myBeesExperimentLabBook") ?? LabBook()
+        try! realm.write {
+            realm.add(labBook)
+        }
+        let entry = LabBookEntry()
+        let url = try! DataExportHelpers.generateFileURLForBaseString("UnitTestLabBook", withExtension: "json")
+        entry.date = Date(timeIntervalSinceReferenceDate: 1000.0)
+        entry.text = "unitTest"
+        try! realm.write {
+            labBook.entries.append(entry)
+        }
+        
+        guard let labBookFromRealm = realm.object(ofType: LabBook.self, forPrimaryKey: "myBeesExperimentLabBook") else {
+            XCTAssert(false, "LabBook  was not persisted into Realm")
+            return
+        }
+        XCTAssert(labBookFromRealm.entries[0].text == "unitTest", "labBook entry.text was not correctly persisted in Realm")
+        XCTAssert(labBookFromRealm.entries[0].date == Date(timeIntervalSinceReferenceDate: 1000.0), "labBook entry.date was not correctly persisted in Realm")
+        labBook.exportTo(fileURL: url) { (result) in
+            switch result {
+            case .error(let error):
+                print(error)
+            case .success:
+                let fileManager = FileManager.default
+                let path = url.path
+                XCTAssert(fileManager.fileExists(atPath: path), "labBook file has not been created")
+            }
         }
     }
+    
+//    func testPerformanceExample() {
+//        // This is an example of a performance test case.
+//        self.measure {
+//            // Put the code you want to measure the time of here.
+//        }
+//    }
     
 }
