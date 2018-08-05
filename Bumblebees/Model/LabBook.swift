@@ -19,38 +19,13 @@ class LabBook: Object {
     }
     
     func exportTo(fileURL: URL, callback: (Result<Bool>)->()) {
-            do {
-                let entries = self.entries.sorted(byKeyPath: "date")
-                var entriesArray = [LabBookEntry]()
-                for entry in entries {
-                    entriesArray.append(entry)
-                }
-                let jsonEncoder = JSONEncoder()
-                jsonEncoder.dateEncodingStrategy = .formatted(DataExportHelpers.dateFormatterWithMilliseconds)
-                do {
-                    let jsonData = try jsonEncoder.encode(entriesArray)
-                    if let jsonString = String(data: jsonData, encoding: .utf8) {
-                        print(jsonString)
-                    }
-                    do {
-                        try jsonData.write(to: fileURL, options: .withoutOverwriting)
-                        
-                        // here is a nice converter to csv: https://json-csv.com
-                        // use the "header / detail report style" for nicest representation
-                        callback(Result.success(true))
-                    } catch {
-                        callback(Result.error("writing file failed"))
-                        print(error)
-                    }
-                } catch {
-                    callback(Result.error("JSON encoding failed"))
-                    print(error)
-                }
-            }
-//        } catch {
-//            print(error)
-//        }
+        let entries = self.entries.sorted(byKeyPath: "date")
+        var entriesArray = [LabBookEntry]()
+        for entry in entries {
+            entriesArray.append(entry)
+        }
+        DataExportHelpers.exportArray(array: entriesArray, to: fileURL) { (result) in
+            callback(result)
+        }
     }
-
-
 }

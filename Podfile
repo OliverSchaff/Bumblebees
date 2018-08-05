@@ -9,3 +9,8 @@ target 'BumblebeesUnitTests' do
   use_frameworks!
   pod 'RealmSwift'
 end
+
+target 'BumblebeesUITests' do
+    use_frameworks!
+    pod 'RealmSwift'
+end

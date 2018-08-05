@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		202B93EF61F3E3AF4EB0ED65 /* Pods_Bumblebees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2EEB1BD2115FEDF002C46EA /* Pods_Bumblebees.framework */; };
+		37D75DE1D9487B55C9E0903E /* Pods_BumblebeesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E02E1FE87106BEE043A4B73 /* Pods_BumblebeesUITests.framework */; };
 		78F92CE83B608DF0C4AFDCC6 /* Pods_BumblebeesUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC02C984803EEF6BB217CA6A /* Pods_BumblebeesUnitTests.framework */; };
+		A2269C102116F81900D82EF1 /* BumblebeesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2269C0F2116F81900D82EF1 /* BumblebeesUITests.swift */; };
 		A227734D2110DC9F007C03EE /* LogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227734B2110DC9E007C03EE /* LogicController.swift */; };
 		A227734E2110DC9F007C03EE /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227734C2110DC9E007C03EE /* Renderer.swift */; };
 		A22773532110DCAC007C03EE /* Theming.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22773502110DCAC007C03EE /* Theming.swift */; };
@@ -55,6 +56,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A2269C122116F81900D82EF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A2CEC5672110D8EE00684926 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A2CEC56E2110D8EE00684926;
+			remoteInfo = Bumblebees;
+		};
 		A2462E572115C9080016ADC8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A2CEC5672110D8EE00684926 /* Project object */;
@@ -67,8 +75,14 @@
 /* Begin PBXFileReference section */
 		160A5D81F81B4BD4AB2F7ADC /* Pods-BumblebeesUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumblebeesUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumblebeesUnitTests/Pods-BumblebeesUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2E4BE2A735F5B1081AA4E149 /* Pods-Bumblebees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebees.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees.release.xcconfig"; sourceTree = "<group>"; };
+		3E02E1FE87106BEE043A4B73 /* Pods_BumblebeesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumblebeesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bumblebees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6390D72CCAC9A5FD33C609E9 /* Pods-BumblebeesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumblebeesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumblebeesUITests/Pods-BumblebeesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7D5A2053CC23F96DC227A606 /* Pods-BumblebeesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumblebeesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumblebeesUITests/Pods-BumblebeesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		92F7FC4D1C280A7DBD2BE462 /* Pods-Bumblebees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees.debug.xcconfig"; sourceTree = "<group>"; };
+		A2269C0D2116F81900D82EF1 /* BumblebeesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumblebeesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A2269C0F2116F81900D82EF1 /* BumblebeesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumblebeesUITests.swift; sourceTree = "<group>"; };
+		A2269C112116F81900D82EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A227734B2110DC9E007C03EE /* LogicController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogicController.swift; sourceTree = "<group>"; };
 		A227734C2110DC9E007C03EE /* Renderer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		A22773502110DCAC007C03EE /* Theming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theming.swift; sourceTree = "<group>"; };
@@ -125,6 +139,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A2269C0A2116F81900D82EF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37D75DE1D9487B55C9E0903E /* Pods_BumblebeesUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2462E4F2115C9080016ADC8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -138,13 +160,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				D29AD87ED389EEFF6B38A130 /* Pods_Bumblebees.framework in Frameworks */,
-				202B93EF61F3E3AF4EB0ED65 /* Pods_Bumblebees.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A2269C0E2116F81900D82EF1 /* BumblebeesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A2269C0F2116F81900D82EF1 /* BumblebeesUITests.swift */,
+				A2269C112116F81900D82EF1 /* Info.plist */,
+			);
+			path = BumblebeesUITests;
+			sourceTree = "<group>";
+		};
 		A227734A2110DC9E007C03EE /* Renderer and LogicController */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				A2462E532115C9080016ADC8 /* BumblebeesUnitTests */,
+				A2269C0E2116F81900D82EF1 /* BumblebeesUITests */,
 				A2CEC5702110D8EE00684926 /* Products */,
 				EA2554A589686F108EDE4EC1 /* Pods */,
 				A35208BB14D3A46F5FF27B19 /* Frameworks */,
@@ -280,6 +311,7 @@
 			children = (
 				A2CEC56F2110D8EE00684926 /* Bumblebees.app */,
 				A2462E522115C9080016ADC8 /* BumblebeesUnitTests.xctest */,
+				A2269C0D2116F81900D82EF1 /* BumblebeesUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -313,6 +345,7 @@
 				A2EEB1BD2115FEDF002C46EA /* Pods_Bumblebees.framework */,
 				6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */,
 				BC02C984803EEF6BB217CA6A /* Pods_BumblebeesUnitTests.framework */,
+				3E02E1FE87106BEE043A4B73 /* Pods_BumblebeesUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -324,6 +357,8 @@
 				2E4BE2A735F5B1081AA4E149 /* Pods-Bumblebees.release.xcconfig */,
 				160A5D81F81B4BD4AB2F7ADC /* Pods-BumblebeesUnitTests.debug.xcconfig */,
 				FDC1B62D97C1C120C94D6F9B /* Pods-BumblebeesUnitTests.release.xcconfig */,
+				7D5A2053CC23F96DC227A606 /* Pods-BumblebeesUITests.debug.xcconfig */,
+				6390D72CCAC9A5FD33C609E9 /* Pods-BumblebeesUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -331,6 +366,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A2269C0C2116F81900D82EF1 /* BumblebeesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A2269C142116F81900D82EF1 /* Build configuration list for PBXNativeTarget "BumblebeesUITests" */;
+			buildPhases = (
+				67B9F591974D70F8B21E5F23 /* [CP] Check Pods Manifest.lock */,
+				A2269C092116F81900D82EF1 /* Sources */,
+				A2269C0A2116F81900D82EF1 /* Frameworks */,
+				A2269C0B2116F81900D82EF1 /* Resources */,
+				950EB76BE648BFB7055C277D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A2269C132116F81900D82EF1 /* PBXTargetDependency */,
+			);
+			name = BumblebeesUITests;
+			productName = BumblebeesUITests;
+			productReference = A2269C0D2116F81900D82EF1 /* BumblebeesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		A2462E512115C9080016ADC8 /* BumblebeesUnitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A2462E592115C9080016ADC8 /* Build configuration list for PBXNativeTarget "BumblebeesUnitTests" */;
@@ -380,6 +435,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Oliver Schaff";
 				TargetAttributes = {
+					A2269C0C2116F81900D82EF1 = {
+						CreatedOnToolsVersion = 9.4;
+						TestTargetID = A2CEC56E2110D8EE00684926;
+					};
 					A2462E512115C9080016ADC8 = {
 						CreatedOnToolsVersion = 9.4;
 						TestTargetID = A2CEC56E2110D8EE00684926;
@@ -404,11 +463,19 @@
 			targets = (
 				A2CEC56E2110D8EE00684926 /* Bumblebees */,
 				A2462E512115C9080016ADC8 /* BumblebeesUnitTests */,
+				A2269C0C2116F81900D82EF1 /* BumblebeesUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A2269C0B2116F81900D82EF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2462E502115C9080016ADC8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -488,6 +555,44 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumblebeesUnitTests/Pods-BumblebeesUnitTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		67B9F591974D70F8B21E5F23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BumblebeesUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		950EB76BE648BFB7055C277D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BumblebeesUITests/Pods-BumblebeesUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BumblebeesUITests/Pods-BumblebeesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CC4A19285EEB87FCB77E24FC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -509,6 +614,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A2269C092116F81900D82EF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2269C102116F81900D82EF1 /* BumblebeesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A2462E4E2115C9080016ADC8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -564,6 +677,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A2269C132116F81900D82EF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A2CEC56E2110D8EE00684926 /* Bumblebees */;
+			targetProxy = A2269C122116F81900D82EF1 /* PBXContainerItemProxy */;
+		};
 		A2462E582115C9080016ADC8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A2CEC56E2110D8EE00684926 /* Bumblebees */;
@@ -591,6 +709,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A2269C152116F81900D82EF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D5A2053CC23F96DC227A606 /* Pods-BumblebeesUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 487Y8AH89Y;
+				INFOPLIST_FILE = BumblebeesUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shaluluberlin.training.BumblebeesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bumblebees;
+			};
+			name = Debug;
+		};
+		A2269C162116F81900D82EF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6390D72CCAC9A5FD33C609E9 /* Pods-BumblebeesUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 487Y8AH89Y;
+				INFOPLIST_FILE = BumblebeesUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = shaluluberlin.training.BumblebeesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Bumblebees;
+			};
+			name = Release;
+		};
 		A2462E5A2115C9080016ADC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 160A5D81F81B4BD4AB2F7ADC /* Pods-BumblebeesUnitTests.debug.xcconfig */;
@@ -800,6 +960,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A2269C142116F81900D82EF1 /* Build configuration list for PBXNativeTarget "BumblebeesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A2269C152116F81900D82EF1 /* Debug */,
+				A2269C162116F81900D82EF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A2462E592115C9080016ADC8 /* Build configuration list for PBXNativeTarget "BumblebeesUnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
