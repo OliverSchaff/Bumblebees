@@ -4,8 +4,8 @@
 <img src="https://github.com/OliverSchaff/Bumblebees/blob/master/graphics/RoundedIcon500.png" width=100px alt="Bumblebees" title="Bublebees">
 </p>
 
-This is the Humboldt Universität zu Berlin green house lighting experiment app for iOS.
-The experiment explores the potential of light emitting diode (LED) powered lighting in green houses. 
+This is the Humboldt Universität zu Berlin greenhouse lighting experiment app for iOS.
+The experiment explores the potential of light emitting diode (LED) powered lighting in greenhouses. 
 The app is used to track pollination behavior of insects while varying the wavelength of the illumination.
 Unfortunately, there is no Android app yet...
 
