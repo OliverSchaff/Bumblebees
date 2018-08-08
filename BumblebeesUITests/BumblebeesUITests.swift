@@ -7,8 +7,12 @@
 //
 
 import XCTest
+import RealmSwift
+@testable import Bumblebees
 
 class BumblebeesUITests: XCTestCase {
+    
+    let app = XCUIApplication()
         
     override func setUp() {
         super.setUp()
@@ -18,7 +22,7 @@ class BumblebeesUITests: XCTestCase {
         // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
         // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        app.launch()
 
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
@@ -28,14 +32,23 @@ class BumblebeesUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
+    func testExportAlerts() {
         
+        app.tables/*@START_MENU_TOKEN@*/.buttons["Export Lab Book"]/*[[".cells.buttons[\"Export Lab Book\"]",".buttons[\"Export Lab Book\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        let successAlert = app.alerts["Success"]
+        successAlert.buttons["OK"].tap()
+        let pred2 = NSPredicate(format: "exists == false")
+        let exp2 = expectation(for: pred2, evaluatedWith: successAlert, handler: nil)
+        let res2 = XCTWaiter.wait(for: [exp2], timeout: 5.0)
+        XCTAssert(res2 == XCTWaiter.Result.completed, "Failed timeout for disappearance of save labbook alert")
         
-        
-        
-        
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        app.tables/*@START_MENU_TOKEN@*/.buttons["Export Experiment Data"]/*[[".cells.buttons[\"Export Experiment Data\"]",".buttons[\"Export Experiment Data\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        successAlert.buttons["OK"].tap()
+        let pred3 = NSPredicate(format: "exists == false")
+        let exp3 = expectation(for: pred3, evaluatedWith: successAlert, handler: nil)
+        let res3 = XCTWaiter.wait(for: [exp3], timeout: 5.0)
+        XCTAssert(res3 == XCTWaiter.Result.completed, "Failed timeout for disappearance of save experiment data alert")
     }
+    
     
 }

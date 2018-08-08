@@ -202,6 +202,7 @@ class ExperimentVC: UIViewController, Renderer {
         alert.addTextField { (textField) in
             textField.text = speciesData.name
             textField.placeholder = "Enter name"
+            textField.clearButtonMode = .always
         }
         
         alert.addAction(saveAction)

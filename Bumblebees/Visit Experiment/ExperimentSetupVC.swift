@@ -36,6 +36,8 @@ class ExperimentSetupVC: UITableViewController {
         objectsTableView.objectsTableViewDelegate = self
         objectsTableView.objects = objects
         objectsTableView.family = family
+        objectsTableView.accessibilityIdentifier = "objectsTable"
+        objectsTableView.isAccessibilityElement = true
         navigationItem.rightBarButtonItem?.title = "New \(family.familyName)"
         title = "One \(family.familyName) Setup"
     }
@@ -97,6 +99,7 @@ class ExperimentSetupVC: UITableViewController {
         alert.addTextField { (textField) in
             textField.text = speciesData.name
             textField.placeholder = "Enter name"
+            textField.clearButtonMode = .always
         }
         
         alert.addAction(saveAction)

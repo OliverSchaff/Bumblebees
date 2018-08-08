@@ -83,6 +83,20 @@ class BumblebeesUnitTests: XCTestCase {
         }
     }
     
+    func testNightMode() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        XCTAssertNotNil(sb, "Could not instantiate storyboard")
+        let entryVC = sb.instantiateViewController(withIdentifier: "entryVC") as? EntryVC
+        XCTAssertNotNil(entryVC, "Could not instantiate EntryVC")
+        _ = entryVC!.view
+        
+        entryVC!.themeProvider.currentTheme = .dark
+        let oldColor = entryVC!.view.backgroundColor
+        entryVC!.themeProvider.currentTheme = .light
+        let newColor = entryVC!.view.backgroundColor
+        XCTAssert(oldColor != newColor, "night mode did not change colors")
+    }
+    
 //    func testPerformanceExample() {
 //        // This is an example of a performance test case.
 //        self.measure {

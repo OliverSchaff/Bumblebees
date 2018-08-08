@@ -253,7 +253,7 @@
         <!--Bumblebees-->
         <scene sceneID="yDU-Pg-Z6h">
             <objects>
-                <tableViewController id="JvM-Zz-0Gm" customClass="EntryVC" customModule="Bumblebees" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="entryVC" id="JvM-Zz-0Gm" customClass="EntryVC" customModule="Bumblebees" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" delaysContentTouches="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="B0Z-gs-9gU" customClass="AppTableView" customModule="Bumblebees" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -394,6 +394,7 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="t8J-xg-MXh">
                                                     <rect key="frame" x="337" y="6" width="51" height="31"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="nightModeSwitch"/>
                                                     <connections>
                                                         <action selector="nightModeChanged:" destination="JvM-Zz-0Gm" eventType="valueChanged" id="4ND-vc-rfo"/>
                                                     </connections>
@@ -407,6 +408,9 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="t8J-xg-MXh" secondAttribute="trailing" constant="8" id="hzL-eU-dpx"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="nightModeCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
