@@ -13,6 +13,17 @@ import RealmSwift
     dynamic var date: Date = Date()
     dynamic var index: Int = 0
     
+    func delete() {
+        let realm = try! Realm()
+        if realm.isInWriteTransaction {
+            realm.delete(self)
+        } else {
+            try! realm.write {
+                realm.delete(self)
+            }
+        }
+    }
+    
     enum CodingKeys: String, CodingKey {
         case date
         case index

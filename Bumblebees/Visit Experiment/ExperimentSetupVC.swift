@@ -22,20 +22,22 @@ class ExperimentSetupVC: UITableViewController {
         performSegue(withIdentifier: "startExperiment", sender: self)
     }
     
-    
-    var objects: Results<ObjectStudied>?
-    var objectToEdit: ObjectStudied!
+    var objects = Objects()
     var family: ObjectStudied.Family!
-    
+    private var objectsStudied: Results<ObjectStudied>? {
+        get {
+            let predicate = NSPredicate(format: "_family = %@", family.familyName)
+            return objects.objectsStudied?.filter(predicate).sorted(byKeyPath: "creationDate", ascending: false)
+        }
+    }
+    private var objectToEdit: ObjectStudied!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpTheming()
-//        let realm = try! Realm()
-//        let predicate = NSPredicate(format: "_family = %@", family.familyName)
-//        objects = realm.objects(ObjectStudied.self).filter(predicate).sorted(byKeyPath: "name")
         objectsTableView.objectsTableViewDelegate = self
-        objectsTableView.objects = objects
+        objectsTableView.objects = objectsStudied
         objectsTableView.family = family
         objectsTableView.accessibilityIdentifier = "objectsTable"
         objectsTableView.isAccessibilityElement = true
@@ -53,7 +55,7 @@ class ExperimentSetupVC: UITableViewController {
         case "startExperiment":
             let flowerVisitsVC = segue.destination as! ExperimentVC
             if let indexOfSelectedObject = objectsTableView.indexPathForSelectedRow?.row {
-                flowerVisitsVC.object = objects![indexOfSelectedObject]
+                flowerVisitsVC.object = objectsStudied![indexOfSelectedObject]
             } else {
                 openSelectObjectAlert()
             }
@@ -67,7 +69,6 @@ class ExperimentSetupVC: UITableViewController {
     }
     
     func openNewObjectAlert() {
-        let realm = try! Realm()
         var speciesData: NameProvider!
         switch family! {
         case .bee:
@@ -87,10 +88,7 @@ class ExperimentSetupVC: UITableViewController {
                                             let nameOfObject = textField.text else {
                                                 return
                                         }
-                                        let object = ObjectStudied(name: nameOfObject, family: self.family)
-                                        try! realm.write {
-                                            realm.add(object)
-                                        }
+                                        let object = Objects.newObject(name: nameOfObject, family: self.family)
                                         self.objectsTableView.selectedObject = object
         }
         

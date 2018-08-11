@@ -20,11 +20,16 @@ class EditObjectVC: UITableViewController {
         performSegue(withIdentifier: "unwindToExperimentSetupVC", sender: self)
     }
     @IBAction func save(_ sender: UIBarButtonItem) {
-        let realm = try! Realm()
-        try! realm.write {
-            object.name = nameTextField.text ?? ""
-            object.comment = commentTextView.text
-        }
+        object.changeNameTo(newName: nameTextField.text ?? "")
+        object.changeCommentTo(newComment: commentTextView.text)
+//        object.name = nameTextField.text ?? ""
+//        object.comment = commentTextView.text
+        
+//        let realm = try! Realm()
+//        try! realm.write {
+//            object.name = nameTextField.text ?? ""
+//            object.comment = commentTextView.text
+//        }
         performSegue(withIdentifier: "unwindToExperimentSetupVC", sender: self)
     }
     var object: ObjectStudied!

@@ -30,6 +30,7 @@ class ObjectStudied: Object, Encodable {
     
     @objc dynamic var _family: String = ""
     @objc dynamic var id = UUID().uuidString
+    @objc dynamic var creationDate: Date = Date()
     @objc dynamic var name: String = ""
     @objc dynamic var comment: String?
     let observedEvents = List<Event>()
@@ -49,6 +50,37 @@ class ObjectStudied: Object, Encodable {
     
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    func delete() {
+        let realm = try! Realm()
+        if realm.isInWriteTransaction {
+            for visit in self.observedEvents {
+                visit.delete()
+            }
+            realm.delete(self)
+        } else {
+            try! realm.write {
+                for visit in self.observedEvents {
+                    visit.delete()
+                }
+                realm.delete(self)
+            }
+        }
+    }
+    
+    func changeNameTo(newName: String) {
+        let realm = try! Realm()
+        try! realm.write {
+            name = newName
+        }
+    }
+    
+    func changeCommentTo(newComment: String) {
+        let realm = try! Realm()
+        try! realm.write {
+            comment = newComment
+        }
     }
     
     enum CodingKeys: String, CodingKey {

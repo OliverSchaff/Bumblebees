@@ -18,6 +18,16 @@ class LabBook: Object {
         return "id"
     }
     
+    convenience init(newLabBook: Bool) {
+        self.init()
+        let realm = try! Realm()
+        if newLabBook {
+            try! realm.write {
+                realm.add(self)
+            }
+        }
+    }
+        
     func exportTo(fileURL: URL, callback: (Result<Bool>)->()) {
         let entries = self.entries.sorted(byKeyPath: "date")
         var entriesArray = [LabBookEntry]()

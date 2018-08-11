@@ -26,38 +26,37 @@ class EntryVC: UITableViewController {
     @IBOutlet weak var nightModeSwitch: UISwitch!
     
     private var appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var labBook = LabBook()
-    var objects = Objects().objectsStudied
+    var labBook: LabBook {
+        get {
+            let realm = try! Realm()
+            let myBeesExperimentLabBook = realm.object(ofType: LabBook.self, forPrimaryKey: "myBeesExperimentLabBook") ?? LabBook(newLabBook: true)
+            return myBeesExperimentLabBook
+        }
+    }
+    var objects = Objects()
+    var objectsStudied: Results<ObjectStudied>? {
+        get {
+            return objects.objectsStudied
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTheming()
         nightModeSwitch.setOn(appDelegate.nightMode, animated: false)
-        let realm = try! Realm()
-        labBook = realm.object(ofType: LabBook.self, forPrimaryKey: "myBeesExperimentLabBook") ?? LabBook()
-        try! realm.write {
-            realm.add(labBook)
-        }
     }
     
     func exportExperimentData() {
-        let realm = try! Realm()
-        let objects = realm.objects(ObjectStudied.self).sorted(byKeyPath: "_family")
-        var objectsArray = [ObjectStudied]()
-        for object in objects {
-            objectsArray.append(object)
-        }
         do {
             let fileURL = try DataExportHelpers.generateFileURLForBaseString("ExperimentData", withExtension: "json")
-            DataExportHelpers.exportArray(array: objectsArray, to: fileURL) { (result) in
+            objects.exportTo(fileURL: fileURL) { (result) in
                 switch result {
                 case .success:
-                    let alert = UIAlertController.ok(title: "Success", message: "Bees have been exported.")
+                    let alert = UIAlertController.ok(title: "Success", message: "Experiment data has been exported.")
                     self.present(alert, animated: true)
                 case .error(let error):
                     print(error)
                 }
-
             }
         } catch {
             print(error)
@@ -85,13 +84,11 @@ class EntryVC: UITableViewController {
         switch segue.identifier {
         case "oneBeeSetup":
             let experimentSetupVC = segue.destination as! ExperimentSetupVC
-            let predicate = NSPredicate(format: "_family = %@", ObjectStudied.Family.bee.familyName)
-            experimentSetupVC.objects = objects?.filter(predicate).sorted(byKeyPath: "name")
+            experimentSetupVC.objects = objects
             experimentSetupVC.family = ObjectStudied.Family.bee
         case "oneFlowerSetup":
             let experimentSetupVC = segue.destination as! ExperimentSetupVC
-            let predicate = NSPredicate(format: "_family = %@", ObjectStudied.Family.flower.familyName)
-            experimentSetupVC.objects = objects?.filter(predicate).sorted(byKeyPath: "name")
+            experimentSetupVC.objects = objects
             experimentSetupVC.family = ObjectStudied.Family.flower
         case "showAddLabBookEntry":
             let navCon = segue.destination as! UINavigationController

@@ -129,13 +129,7 @@ class ObjectsTableView: AppTableView, UITableViewDelegate, UITableViewDataSource
         if editingStyle == .delete {
             // Delete the row from the data source
             if let object = objects?[indexPath.row] {
-                let realm = try! Realm()
-                try! realm.write {
-                    for visit in object.observedEvents {
-                        realm.delete(visit)
-                    }
-                    realm.delete(object)
-                }
+                object.delete()
             }
         }
     }

@@ -165,8 +165,6 @@ class ExperimentVC: UIViewController, Renderer {
     }
     
     func openNewObjectAlert() {
-        
-//        let realm = try! Realm()
         var speciesData: NameProvider!
         let currentFamily: ObjectStudied.Family!
         switch object.family {
@@ -189,7 +187,7 @@ class ExperimentVC: UIViewController, Renderer {
                                             let nameOfObject = textField.text else {
                                                 return
                                         }
-                                        let obj = ObjectStudied(name: nameOfObject, family: currentFamily)
+                                        let obj = Objects.newObject(name: nameOfObject, family: currentFamily)
                                         self.object = obj
                                         self.logicController.newObject(obj)
                                         self.notificationToken?.invalidate()

@@ -43,12 +43,8 @@ class ExperimentLogicController: LogicController {
     
     // MARK: - event handling
     
-    func newObject(_ object: ObjectStudied) {
-        let realm = try! Realm()
-        try! realm.write {
-            realm.add(object)
-        }
-        requestRenderingOfState(.newObject(object))
+    func newObject(_ obj: ObjectStudied) {
+        requestRenderingOfState(.newObject(obj))
     }
     
     func changeForObject(_ obj: ObjectStudied) {
@@ -76,15 +72,11 @@ class ExperimentLogicController: LogicController {
     }
     
     func undoTappedForObject(_ obj: ObjectStudied) {
-        guard obj.observedEvents.count > minEventIndex else { return }
-        let realm = try! Realm()
-        try! realm.write {
-            guard let lastVisit = obj.observedEvents.last else { return }
-            let uiState = uiStateStack.pop()
-            newSubjectSide = uiState.newSubjectSideBeforeEvent
-            lastTapped = uiState.lastTappedBeforeEvent
-            realm.delete(lastVisit)
-        }
+        guard obj.observedEvents.count > minEventIndex, let lastVisit = obj.observedEvents.last else { return }
+        let uiState = uiStateStack.pop()
+        newSubjectSide = uiState.newSubjectSideBeforeEvent
+        lastTapped = uiState.lastTappedBeforeEvent
+        lastVisit.delete()
     }
     
     func initialSetupForObject(_ obj: ObjectStudied) {

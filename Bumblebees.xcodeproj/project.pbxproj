@@ -244,9 +244,9 @@
 		A22773732110DD3B007C03EE /* Visit Experiment */ = {
 			isa = PBXGroup;
 			children = (
-				A22773742110DD3B007C03EE /* ExperimentLogicController.swift */,
 				A22773752110DD3B007C03EE /* ObjectsTableView.swift */,
 				A22773762110DD3B007C03EE /* ExperimentSetupVC.swift */,
+				A22773742110DD3B007C03EE /* ExperimentLogicController.swift */,
 				A22773772110DD3B007C03EE /* ExperimentVC.swift */,
 				A22773782110DD3B007C03EE /* ObjectCell.swift */,
 				A22773792110DD3B007C03EE /* ButtonView.swift */,
