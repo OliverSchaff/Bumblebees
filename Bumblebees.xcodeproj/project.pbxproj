@@ -52,6 +52,7 @@
 		A22773A82110DD3B007C03EE /* ExportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227738C2110DD3B007C03EE /* ExportCell.swift */; };
 		A2462E3F2115C0A30016ADC8 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2462E3E2115C0A30016ADC8 /* License.txt */; };
 		A2462E552115C9080016ADC8 /* BumblebeesUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2462E542115C9080016ADC8 /* BumblebeesUnitTests.swift */; };
+		A24C5F0E211F2983004B5A08 /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C5F0D211F2983004B5A08 /* Objects.swift */; };
 		D29AD87ED389EEFF6B38A130 /* Pods_Bumblebees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +129,7 @@
 		A2462E522115C9080016ADC8 /* BumblebeesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumblebeesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2462E542115C9080016ADC8 /* BumblebeesUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumblebeesUnitTests.swift; sourceTree = "<group>"; };
 		A2462E562115C9080016ADC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A24C5F0D211F2983004B5A08 /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
 		A2CEC56F2110D8EE00684926 /* Bumblebees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumblebees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D9E86A2110DE610080897B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2EEB1BD2115FEDF002C46EA /* Pods_Bumblebees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Bumblebees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +206,7 @@
 				A227735D2110DD26007C03EE /* BeeData.swift */,
 				A227735E2110DD26007C03EE /* LabBookEntry.swift */,
 				A227735F2110DD26007C03EE /* ObjectStudied.swift */,
+				A24C5F0D211F2983004B5A08 /* Objects.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -644,6 +647,7 @@
 				A22773942110DD3B007C03EE /* DataExportHelpers.swift in Sources */,
 				A22773532110DCAC007C03EE /* Theming.swift in Sources */,
 				A227739B2110DD3B007C03EE /* ButtonView.swift in Sources */,
+				A24C5F0E211F2983004B5A08 /* Objects.swift in Sources */,
 				A22773602110DD26007C03EE /* LabBook.swift in Sources */,
 				A22773902110DD3B007C03EE /* Result.swift in Sources */,
 				A227734D2110DC9F007C03EE /* LogicController.swift in Sources */,

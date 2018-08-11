@@ -27,6 +27,7 @@ class EntryVC: UITableViewController {
     
     private var appDelegate = UIApplication.shared.delegate as! AppDelegate
     var labBook = LabBook()
+    var objects = Objects().objectsStudied
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,9 +85,13 @@ class EntryVC: UITableViewController {
         switch segue.identifier {
         case "oneBeeSetup":
             let experimentSetupVC = segue.destination as! ExperimentSetupVC
+            let predicate = NSPredicate(format: "_family = %@", ObjectStudied.Family.bee.familyName)
+            experimentSetupVC.objects = objects?.filter(predicate).sorted(byKeyPath: "name")
             experimentSetupVC.family = ObjectStudied.Family.bee
         case "oneFlowerSetup":
             let experimentSetupVC = segue.destination as! ExperimentSetupVC
+            let predicate = NSPredicate(format: "_family = %@", ObjectStudied.Family.flower.familyName)
+            experimentSetupVC.objects = objects?.filter(predicate).sorted(byKeyPath: "name")
             experimentSetupVC.family = ObjectStudied.Family.flower
         case "showAddLabBookEntry":
             let navCon = segue.destination as! UINavigationController

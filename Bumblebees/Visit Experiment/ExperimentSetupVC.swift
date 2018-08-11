@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 
+
 class ExperimentSetupVC: UITableViewController {
 
     @IBAction func unwindToExperimentSetupVC(_ sender: UIStoryboardSegue) {
@@ -22,7 +23,7 @@ class ExperimentSetupVC: UITableViewController {
     }
     
     
-    private var objects: Results<ObjectStudied>!
+    var objects: Results<ObjectStudied>?
     var objectToEdit: ObjectStudied!
     var family: ObjectStudied.Family!
     
@@ -30,9 +31,9 @@ class ExperimentSetupVC: UITableViewController {
         super.viewDidLoad()
         
         setUpTheming()
-        let realm = try! Realm()
-        let predicate = NSPredicate(format: "_family = %@", family.familyName)
-        objects = realm.objects(ObjectStudied.self).filter(predicate).sorted(byKeyPath: "name")
+//        let realm = try! Realm()
+//        let predicate = NSPredicate(format: "_family = %@", family.familyName)
+//        objects = realm.objects(ObjectStudied.self).filter(predicate).sorted(byKeyPath: "name")
         objectsTableView.objectsTableViewDelegate = self
         objectsTableView.objects = objects
         objectsTableView.family = family
@@ -52,7 +53,7 @@ class ExperimentSetupVC: UITableViewController {
         case "startExperiment":
             let flowerVisitsVC = segue.destination as! ExperimentVC
             if let indexOfSelectedObject = objectsTableView.indexPathForSelectedRow?.row {
-                flowerVisitsVC.object = objects[indexOfSelectedObject]
+                flowerVisitsVC.object = objects![indexOfSelectedObject]
             } else {
                 openSelectObjectAlert()
             }
