@@ -49,13 +49,6 @@ class ExperimentVC: UIViewController, Renderer {
     }()
     var object: ObjectStudied!
     var notificationToken: NotificationToken? = nil
-    let newObjectAlert: NewObjectAlert = {
-        return UIAlertController()
-    }()
-    let okAlert: OKAlert = {
-        return UIAlertController()
-    }()
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -173,7 +166,7 @@ class ExperimentVC: UIViewController, Renderer {
     
     func openNewObjectAlert() {
         let family = object.family
-        let alert = newObjectAlert.nameForObjectOfFamily(family) { (name) in
+        let alert = UIAlertController.nameForObjectOfFamily(family) { (name) in
             let obj = Objects.newObject(name: name, family: family)
             self.object = obj
             self.logicController.newObject(obj)
@@ -192,7 +185,7 @@ class ExperimentVC: UIViewController, Renderer {
                 return "When the flower is visited by a bee, hit a button. When the same bee hops along on this flower, hit the same button again. When another bee lands on the flower, use the other button. If this second bee keeps hopping along on the flower, hit the same button again."
             }
         }()
-        let alert = okAlert.ok(title: "What...?", message: helpText)
+        let alert = UIAlertController.ok(title: "What...?", message: helpText)
         present(alert, animated: true)
 
     }

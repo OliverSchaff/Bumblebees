@@ -31,12 +31,6 @@ class ExperimentSetupVC: UITableViewController {
         }
     }
     private var objectToEdit: ObjectStudied!
-    let newObjectAlert: NewObjectAlert = {
-        return UIAlertController()
-    }()
-    let okAlert: OKAlert = {
-        return UIAlertController()
-    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +67,7 @@ class ExperimentSetupVC: UITableViewController {
     }
     
     func openNewObjectAlert() {
-        let alert = newObjectAlert.nameForObjectOfFamily(family!) { (name) in
+        let alert = UIAlertController.nameForObjectOfFamily(family!) { (name) in
             let object = Objects.newObject(name: name, family: self.family)
             self.objectsTableView.selectedObject = object
         }
@@ -81,7 +75,7 @@ class ExperimentSetupVC: UITableViewController {
     }
     
     func openSelectObjectAlert() {
-        let alert = okAlert.ok(title: "Select \(family.familyName)", message: "Please select a \(family.familyName.lowercased()) for the experiment.")
+        let alert = UIAlertController.ok(title: "Select \(family.familyName)", message: "Please select a \(family.familyName.lowercased()) for the experiment.")
         present(alert, animated: true)
     }
     
