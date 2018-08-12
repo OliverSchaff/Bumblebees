@@ -106,16 +106,112 @@ extension UIViewController {
     }
 }
 
-extension UIAlertController {
-    static func ok(title: String, message: String) -> UIAlertController {
+protocol OKAlert {
+    func ok(title: String, message: String) -> UIAlertController
+}
+
+extension OKAlert where Self: UIAlertController {
+    func ok(title: String, message: String) -> UIAlertController {
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
         
         let okAction = UIAlertAction(title: "OK",
-                                         style: .default)
+                                     style: .default)
         alert.addAction(okAction)
         return alert
     }
-    
 }
+
+protocol NewObjectAlert {
+    func nameForObjectOfFamily(_ family: ObjectStudied.Family, callback: @escaping (String)->()) -> UIAlertController
+}
+
+extension NewObjectAlert where Self: UIAlertController {
+    func nameForObjectOfFamily(_ family: ObjectStudied.Family, callback: @escaping (String)->()) -> UIAlertController {
+        var speciesData: NameProvider!
+        switch family {
+        case .bee:
+            speciesData = BeeData()
+        case .flower:
+            speciesData = FlowerData()
+        }
+        let alert = UIAlertController(title: "New \(family.familyName)",
+            message: "Add name of \(family.familyName.lowercased())",
+            preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save",
+                                       style: .default) { action in
+                                        
+                                        guard let textField = alert.textFields?.first,
+                                            let nameOfObject = textField.text else {
+                                                return
+                                        }
+                                        callback(nameOfObject)
+//                                        let object = Objects.newObject(name: nameOfObject, family: self.family)
+//                                        self.objectsTableView.selectedObject = object
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .default)
+        
+        alert.addTextField { (textField) in
+            textField.text = speciesData.name
+            textField.placeholder = "Enter name"
+            textField.clearButtonMode = .always
+        }
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        return alert
+    }
+}
+
+extension UIAlertController: OKAlert, NewObjectAlert {}
+
+
+
+
+
+
+//func openNewObjectAlert() {
+//    var speciesData: NameProvider!
+//    switch family! {
+//    case .bee:
+//        speciesData = BeeData()
+//    case .flower:
+//        speciesData = FlowerData()
+//    }
+//    let alert = UIAlertController(title: "New \(family.familyName)",
+//        message: "Add name of \(family.familyName.lowercased())",
+//        preferredStyle: .alert)
+//
+//    let saveAction = UIAlertAction(title: "Save",
+//                                   style: .default) {
+//                                    [unowned self] action in
+//
+//                                    guard let textField = alert.textFields?.first,
+//                                        let nameOfObject = textField.text else {
+//                                            return
+//                                    }
+//                                    let object = Objects.newObject(name: nameOfObject, family: self.family)
+//                                    self.objectsTableView.selectedObject = object
+//    }
+//
+//    let cancelAction = UIAlertAction(title: "Cancel",
+//                                     style: .default)
+//
+//    alert.addTextField { (textField) in
+//        textField.text = speciesData.name
+//        textField.placeholder = "Enter name"
+//        textField.clearButtonMode = .always
+//    }
+//
+//    alert.addAction(saveAction)
+//    alert.addAction(cancelAction)
+//
+//    present(alert, animated: true)
+//
+//}
+

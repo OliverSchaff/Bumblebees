@@ -49,6 +49,13 @@ class ExperimentVC: UIViewController, Renderer {
     }()
     var object: ObjectStudied!
     var notificationToken: NotificationToken? = nil
+    let newObjectAlert: NewObjectAlert = {
+        return UIAlertController()
+    }()
+    let okAlert: OKAlert = {
+        return UIAlertController()
+    }()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -165,49 +172,15 @@ class ExperimentVC: UIViewController, Renderer {
     }
     
     func openNewObjectAlert() {
-        var speciesData: NameProvider!
-        let currentFamily: ObjectStudied.Family!
-        switch object.family {
-        case .bee:
-            speciesData = BeeData()
-            currentFamily = .bee
-        case .flower:
-            speciesData = FlowerData()
-            currentFamily = .flower
+        let family = object.family
+        let alert = newObjectAlert.nameForObjectOfFamily(family) { (name) in
+            let obj = Objects.newObject(name: name, family: family)
+            self.object = obj
+            self.logicController.newObject(obj)
+            self.notificationToken?.invalidate()
+            self.notificationToken = self.notificationTokenFor(obj)
         }
-        let alert = UIAlertController(title: "New \(object.family.familyName)",
-            message: "Add name of \(object.family.familyName.lowercased())",
-            preferredStyle: .alert)
-        
-        let saveAction = UIAlertAction(title: "Save",
-                                       style: .default) {
-                                        [unowned self] action in
-                                        
-                                        guard let textField = alert.textFields?.first,
-                                            let nameOfObject = textField.text else {
-                                                return
-                                        }
-                                        let obj = Objects.newObject(name: nameOfObject, family: currentFamily)
-                                        self.object = obj
-                                        self.logicController.newObject(obj)
-                                        self.notificationToken?.invalidate()
-                                        self.notificationToken = self.notificationTokenFor(obj)
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .default)
-        
-        alert.addTextField { (textField) in
-            textField.text = speciesData.name
-            textField.placeholder = "Enter name"
-            textField.clearButtonMode = .always
-        }
-        
-        alert.addAction(saveAction)
-        alert.addAction(cancelAction)
-        
         present(alert, animated: true)
-        
     }
 
     func openHelpAlert() {
@@ -219,7 +192,7 @@ class ExperimentVC: UIViewController, Renderer {
                 return "When the flower is visited by a bee, hit a button. When the same bee hops along on this flower, hit the same button again. When another bee lands on the flower, use the other button. If this second bee keeps hopping along on the flower, hit the same button again."
             }
         }()
-        let alert = UIAlertController.ok(title: "What...?", message: helpText)
+        let alert = okAlert.ok(title: "What...?", message: helpText)
         present(alert, animated: true)
 
     }

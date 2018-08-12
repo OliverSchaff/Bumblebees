@@ -37,6 +37,10 @@ class EntryVC: UITableViewController {
             return objects.objectsStudied
         }
     }
+    let okAlert: OKAlert = {
+        return UIAlertController()
+    }()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +52,7 @@ class EntryVC: UITableViewController {
         data.exportAsJSON { (result) in
             switch result {
             case .success:
-                let alert = UIAlertController.ok(title: "Success", message: "\(data.displayText) has been exported.")
+                let alert = okAlert.ok(title: "Success", message: "\(data.displayText) has been exported.")
                 self.present(alert, animated: true)
             case .error(let error):
                 print(error)

@@ -31,6 +31,12 @@ class ExperimentSetupVC: UITableViewController {
         }
     }
     private var objectToEdit: ObjectStudied!
+    let newObjectAlert: NewObjectAlert = {
+        return UIAlertController()
+    }()
+    let okAlert: OKAlert = {
+        return UIAlertController()
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,47 +73,15 @@ class ExperimentSetupVC: UITableViewController {
     }
     
     func openNewObjectAlert() {
-        var speciesData: NameProvider!
-        switch family! {
-        case .bee:
-            speciesData = BeeData()
-        case .flower:
-            speciesData = FlowerData()
+        let alert = newObjectAlert.nameForObjectOfFamily(family!) { (name) in
+            let object = Objects.newObject(name: name, family: self.family)
+            self.objectsTableView.selectedObject = object
         }
-        let alert = UIAlertController(title: "New \(family.familyName)",
-                                      message: "Add name of \(family.familyName.lowercased())",
-                                      preferredStyle: .alert)
-        
-        let saveAction = UIAlertAction(title: "Save",
-                                       style: .default) {
-                                        [unowned self] action in
-                                        
-                                        guard let textField = alert.textFields?.first,
-                                            let nameOfObject = textField.text else {
-                                                return
-                                        }
-                                        let object = Objects.newObject(name: nameOfObject, family: self.family)
-                                        self.objectsTableView.selectedObject = object
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .default)
-        
-        alert.addTextField { (textField) in
-            textField.text = speciesData.name
-            textField.placeholder = "Enter name"
-            textField.clearButtonMode = .always
-        }
-        
-        alert.addAction(saveAction)
-        alert.addAction(cancelAction)
-        
         present(alert, animated: true)
-        
     }
     
     func openSelectObjectAlert() {
-        let alert = UIAlertController.ok(title: "Select \(family.familyName)", message: "Please select a \(family.familyName.lowercased()) for the experiment.")
+        let alert = okAlert.ok(title: "Select \(family.familyName)", message: "Please select a \(family.familyName.lowercased()) for the experiment.")
         present(alert, animated: true)
     }
     
