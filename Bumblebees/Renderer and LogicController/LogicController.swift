@@ -6,7 +6,7 @@
 //  Copyright © 2018 Oliver Schaff. All rights reserved.
 //
 
-/// A class that computes view controller states and requests the rendering of these states with it's requestRenderingOfState(_ state:) function
+/// A class that computes view controller states and requests the rendering of these states with its requestRenderingOfState(_ state:) function
 protocol LogicController {
     associatedtype State: ViewControllerState
     var renderHandler: (State)->() {get }

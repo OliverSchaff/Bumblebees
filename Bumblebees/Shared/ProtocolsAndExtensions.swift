@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+protocol JSONExportable {
+    func exportAsJSON(callback: (Result<Bool>)->())
+    var displayText: String { get }
+}
+
 protocol ObjectsTableViewDelegate: class {
     func didTapAccessoryForObject(_ object: ObjectStudied)
 }

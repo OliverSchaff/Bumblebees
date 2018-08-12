@@ -124,7 +124,6 @@ class ObjectsTableView: AppTableView, UITableViewDelegate, UITableViewDataSource
         return true
     }
     
-    // Override to support editing the table view.
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source

@@ -39,8 +39,6 @@ class ExperimentSetupVC: UITableViewController {
         objectsTableView.objectsTableViewDelegate = self
         objectsTableView.objects = objectsStudied
         objectsTableView.family = family
-        objectsTableView.accessibilityIdentifier = "objectsTable"
-        objectsTableView.isAccessibilityElement = true
         navigationItem.rightBarButtonItem?.title = "New \(family.familyName)"
         title = "One \(family.familyName) Setup"
     }

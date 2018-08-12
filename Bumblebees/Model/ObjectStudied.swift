@@ -41,6 +41,15 @@ class ObjectStudied: Object, Encodable {
             return f
         }
     }
+    private var lastFlowerIndex: Int {
+        get {
+            if let lastVisit = observedEvents.last {
+                return lastVisit.index
+            } else {
+                return 0
+            }
+        }
+    }
 
     convenience init(name: String, family: Family) {
         self.init()
@@ -81,6 +90,25 @@ class ObjectStudied: Object, Encodable {
         try! realm.write {
             comment = newComment
         }
+    }
+    
+    private func addEvent(_ event: Event) {
+        let realm = try! Realm()
+        try! realm.write {
+            observedEvents.append(event)
+        }
+    }
+    
+    func newEvent(newSubject: Bool) -> Event {
+        let event = Event()
+        event.date = Date()
+        if newSubject || observedEvents.isEmpty {
+            event.index = lastFlowerIndex + 1
+        } else {
+            event.index = lastFlowerIndex
+        }
+        addEvent(event)
+        return event
     }
     
     enum CodingKeys: String, CodingKey {

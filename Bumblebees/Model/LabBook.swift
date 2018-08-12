@@ -9,26 +9,36 @@
 import UIKit
 import RealmSwift
 
-class LabBook: Object {
+class LabBook: Object, JSONExportable {
     
     let entries = List<LabBookEntry>()
     @objc dynamic var id = "myBeesExperimentLabBook"
+    let displayText = "Labbook"
     
     override static func primaryKey() -> String? {
         return "id"
     }
     
-    convenience init(newLabBook: Bool) {
-        self.init()
+    static func makeNew() -> LabBook {
+        let newLabBook = LabBook.init()
         let realm = try! Realm()
-        if newLabBook {
-            try! realm.write {
-                realm.add(self)
-            }
+        try! realm.write {
+            realm.add(newLabBook)
         }
+        return newLabBook
+    }
+    
+    static func open() -> LabBook? {
+        let realm = try! Realm()
+        let myBeesExperimentLabBook = realm.object(ofType: LabBook.self, forPrimaryKey: "myBeesExperimentLabBook")
+        return myBeesExperimentLabBook
     }
         
-    func exportTo(fileURL: URL, callback: (Result<Bool>)->()) {
+    func exportAsJSON(callback: (Result<Bool>)->()) {
+        guard let fileURL = try? DataExportHelpers.generateFileURLForBaseString("LabBook", withExtension: "json") else {
+            callback(Result.error("File could not be opened"))
+            return
+        }
         let entries = self.entries.sorted(byKeyPath: "date")
         var entriesArray = [LabBookEntry]()
         for entry in entries {

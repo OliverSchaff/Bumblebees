@@ -84,30 +84,9 @@ class ExperimentLogicController: LogicController {
         minEventIndex = obj.observedEvents.count
     }
     
-    // MARK: - Helper code
-    
     func addEventForObject(_ obj: ObjectStudied, newSubject: Bool) {
-        let event = Event()
-        event.date = Date()
-        if newSubject || obj.observedEvents.isEmpty {
-            event.index = lastFlowerIndexOfObject(obj) + 1
-        } else {
-            event.index = lastFlowerIndexOfObject(obj)
-        }
+        let event = obj.newEvent(newSubject: newSubject)
         uiStateStack.push(UIState(event: event, newSubjectSideBeforeEvent: newSubjectSide, lastTappedBeforeEvent: lastTapped))
-        let realm = try! Realm()
-        try! realm.write {
-            obj.observedEvents.append(event)
-        }
     }
     
-    
-    func lastFlowerIndexOfObject(_ obj: ObjectStudied) -> Int {
-        if let lastVisit = obj.observedEvents.last {
-            return lastVisit.index
-        } else {
-            return 0
-        }
-    }
-
 }

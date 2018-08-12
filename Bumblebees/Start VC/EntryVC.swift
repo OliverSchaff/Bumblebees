@@ -14,10 +14,10 @@ class EntryVC: UITableViewController {
     @IBAction func unwindToExperimentSetupVC(_ sender: UIStoryboardSegue) {
     }
     @IBAction func exportBees(_ sender: UIButton) {
-        exportExperimentData()
+        export(objects)
     }
     @IBAction func exportLabBook(_ sender: UIButton) {
-        exportLabBook()
+        export(labBook)
     }
     @IBAction func nightModeChanged(_ sender: UISwitch) {
         themeProvider.currentTheme = sender.isOn ? AppTheme.dark : AppTheme.light
@@ -28,9 +28,7 @@ class EntryVC: UITableViewController {
     private var appDelegate = UIApplication.shared.delegate as! AppDelegate
     var labBook: LabBook {
         get {
-            let realm = try! Realm()
-            let myBeesExperimentLabBook = realm.object(ofType: LabBook.self, forPrimaryKey: "myBeesExperimentLabBook") ?? LabBook(newLabBook: true)
-            return myBeesExperimentLabBook
+            return LabBook.open() ?? LabBook.makeNew()
         }
     }
     var objects = Objects()
@@ -46,37 +44,15 @@ class EntryVC: UITableViewController {
         nightModeSwitch.setOn(appDelegate.nightMode, animated: false)
     }
     
-    func exportExperimentData() {
-        do {
-            let fileURL = try DataExportHelpers.generateFileURLForBaseString("ExperimentData", withExtension: "json")
-            objects.exportTo(fileURL: fileURL) { (result) in
-                switch result {
-                case .success:
-                    let alert = UIAlertController.ok(title: "Success", message: "Experiment data has been exported.")
-                    self.present(alert, animated: true)
-                case .error(let error):
-                    print(error)
-                }
+    func export<T: JSONExportable>(_ data: T) {
+        data.exportAsJSON { (result) in
+            switch result {
+            case .success:
+                let alert = UIAlertController.ok(title: "Success", message: "\(data.displayText) has been exported.")
+                self.present(alert, animated: true)
+            case .error(let error):
+                print(error)
             }
-        } catch {
-            print(error)
-        }
-    }
-    
-    func exportLabBook() {
-        do {
-            let fileURL = try DataExportHelpers.generateFileURLForBaseString("LabBook", withExtension: "json")
-            labBook.exportTo(fileURL: fileURL) { (result) in
-                switch result {
-                case .success:
-                    let alert = UIAlertController.ok(title: "Success", message: "Lab book has been exported.")
-                    self.present(alert, animated: true)
-                case .error(let error):
-                    print(error)
-                }
-            }
-        } catch {
-            print(error)
         }
     }
     
