@@ -48,4 +48,19 @@ class LabBook: Object, JSONExportable {
             callback(result)
         }
     }
+    
+    func exportAsJSON2(callback: (Result<URL>)->()) {
+        guard let fileURL = try? DataExportHelpers.generateFileURLForBaseString("LabBook", withExtension: "json") else {
+            callback(Result.error("File could not be opened"))
+            return
+        }
+        let entries = self.entries.sorted(byKeyPath: "date")
+        var entriesArray = [LabBookEntry]()
+        for entry in entries {
+            entriesArray.append(entry)
+        }
+        DataExportHelpers.exportArray(array: entriesArray, to: fileURL) { (result) in
+            callback(Result.success(fileURL))
+        }
+    }
 }

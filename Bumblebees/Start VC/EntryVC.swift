@@ -13,17 +13,21 @@ class EntryVC: UITableViewController {
     
     @IBAction func unwindToExperimentSetupVC(_ sender: UIStoryboardSegue) {
     }
-    @IBAction func exportBees(_ sender: UIButton) {
-        export(objects)
-    }
-    @IBAction func exportLabBook(_ sender: UIButton) {
-        export(labBook)
+//    @IBAction func exportBees(_ sender: UIButton) {
+//        export(objects)
+//    }
+//    @IBAction func exportLabBook(_ sender: UIButton) {
+//        export(labBook)
+//    }
+    @IBAction func shareData(_ sender: Any) {
+        shareData()
     }
     @IBAction func nightModeChanged(_ sender: UISwitch) {
         themeProvider.currentTheme = sender.isOn ? AppTheme.dark : AppTheme.light
         appDelegate.nightMode = sender.isOn
     }
     @IBOutlet weak var nightModeSwitch: UISwitch!
+    @IBOutlet weak var shareButton: UIButton!
     
     private var appDelegate = UIApplication.shared.delegate as! AppDelegate
     var labBook: LabBook {
@@ -37,9 +41,40 @@ class EntryVC: UITableViewController {
             return objects.objectsStudied
         }
     }
-//    let okAlert: OKAlert = {
-//        return UIAlertController()
-//    }()
+    
+    func shareData() {
+        var labBookURL: URL?
+        labBook.exportAsJSON2 { (result) in
+            switch result {
+            case .success(let fileURL):
+                labBookURL = fileURL
+            case .error(let error):
+                print(error)
+            }
+        }
+        var objectsURL: URL?
+        objects.exportAsJSON2 { (result) in
+            switch result {
+            case .success(let fileURL):
+                objectsURL = fileURL
+            case .error(let error):
+                print(error)
+            }
+        }
+        var activityItems = [Any]()
+        activityItems.append("This is an export from HUB Bumblebees. Here are the data and the labbok as .JSON files. Convert them to Comma Separated Values with https://json-csv.com")
+        if let objectsURL = objectsURL {
+            activityItems.append(objectsURL)
+        }
+        if let labBookURL = labBookURL {
+            activityItems.append(labBookURL)
+        }
+        let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        if let popoverPresentationController = activityVC.popoverPresentationController {
+            popoverPresentationController.sourceView = shareButton
+        }
+        present(activityVC, animated: true, completion: nil)
+    }
 
     
     override func viewDidLoad() {

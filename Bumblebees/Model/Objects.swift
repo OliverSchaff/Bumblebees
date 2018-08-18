@@ -45,5 +45,25 @@ struct Objects: JSONExportable {
             callback(result)
         }
     }
+    
+    func exportAsJSON2(callback: (Result<URL>)->()) {
+        guard let objects = objectsStudied else {
+            callback(Result.error("There are no objects to export"))
+            return
+        }
+        guard let fileURL = try? DataExportHelpers.generateFileURLForBaseString("ExperimentData", withExtension: "json") else {
+            callback(Result.error("File could not be opened"))
+            return
+        }
+        let sortedObjects = objects.sorted(byKeyPath: "_family")
+        var objectsArray = [ObjectStudied]()
+        for object in sortedObjects {
+            objectsArray.append(object)
+        }
+        DataExportHelpers.exportArray(array: objectsArray, to: fileURL) { (result) in
+            callback(Result.success(fileURL))
+        }
+    }
+
 
 }

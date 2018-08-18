@@ -71,7 +71,7 @@ class BumblebeesUnitTests: XCTestCase {
         }
         XCTAssert(labBookFromRealm.entries[0].text == "unitTest", "labBook entry.text was not correctly persisted in Realm")
         XCTAssert(labBookFromRealm.entries[0].date == Date(timeIntervalSinceReferenceDate: 1000.0), "labBook entry.date was not correctly persisted in Realm")
-        labBook.exportTo(fileURL: url) { (result) in
+        labBook.exportAsJSON { (result) in
             switch result {
             case .error(let error):
                 print(error)
@@ -80,6 +80,7 @@ class BumblebeesUnitTests: XCTestCase {
                 let path = url.path
                 XCTAssert(fileManager.fileExists(atPath: path), "labBook file has not been created")
             }
+
         }
     }
     
