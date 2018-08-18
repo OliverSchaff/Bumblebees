@@ -300,6 +300,7 @@
 		A2CEC5662110D8EE00684926 = {
 			isa = PBXGroup;
 			children = (
+				A2462E3E2115C0A30016ADC8 /* License.txt */,
 				A2462E532115C9080016ADC8 /* BumblebeesUnitTests */,
 				A2269C0E2116F81900D82EF1 /* BumblebeesUITests */,
 				A2CEC5702110D8EE00684926 /* Products */,
@@ -324,7 +325,6 @@
 			children = (
 				A2462E3D2115A9530016ADC8 /* Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png */,
 				A2D9E86A2110DE610080897B /* Info.plist */,
-				A2462E3E2115C0A30016ADC8 /* License.txt */,
 				A227734F2110DCAC007C03EE /* Theming */,
 				A22773582110DD26007C03EE /* Model */,
 				A22773672110DD3B007C03EE /* Add Lab Book Entry VC */,
