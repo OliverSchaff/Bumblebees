@@ -72,7 +72,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func resetState() {
         let realm = try! Realm()
-        realm.deleteAll()
+        try! realm.write {
+            realm.deleteAll()
+        }
     }
     
 }

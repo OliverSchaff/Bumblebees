@@ -55,6 +55,9 @@
                                                             </connections>
                                                         </tableViewCell>
                                                     </prototypes>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="ObjectsTable"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </tableView>
                                             </subviews>
                                             <constraints>
@@ -91,6 +94,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="jQL-k1-RCD" secondAttribute="trailing" id="pdL-Qo-RWR"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="StartExperimentCell"/>
+                                        </userDefinedRuntimeAttributes>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -277,6 +283,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="BeeExperimentCell"/>
                                         <connections>
                                             <segue destination="sip-PJ-3WM" kind="show" identifier="oneBeeSetup" id="tRa-hQ-xJp"/>
                                         </connections>
@@ -297,6 +304,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration" identifier="FlowerExperimentCell"/>
                                         <connections>
                                             <segue destination="sip-PJ-3WM" kind="show" identifier="oneFlowerSetup" id="9U7-Wv-pe6"/>
                                         </connections>
@@ -338,6 +346,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H73-vr-Tpf">
                                                     <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="ShareButton"/>
                                                     <state key="normal" title="Share Data and Labbook"/>
                                                     <connections>
                                                         <action selector="shareData:" destination="JvM-Zz-0Gm" eventType="touchUpInside" id="CFb-X9-AP1"/>

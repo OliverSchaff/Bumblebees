@@ -33,23 +33,86 @@ class BumblebeesUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExportAlerts() {
+    func testShare() {
+        let shareButton = app.buttons["ShareButton"]
+        XCTAssertTrue(shareButton.exists)
+        shareButton.tap()
+        let cancel = app.buttons["Cancel"]
+        let cancelExists = cancel.waitForExistence(timeout: 5.0)
+        XCTAssertTrue(cancelExists)
+        cancel.tap()
+        XCTAssertFalse(cancel.exists)
+        XCUIApplication().navigationBars["Bumblebees"].otherElements["Bumblebees"].tap()
         
-        app.tables/*@START_MENU_TOKEN@*/.buttons["Export Lab Book"]/*[[".cells.buttons[\"Export Lab Book\"]",".buttons[\"Export Lab Book\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        let successAlert = app.alerts["Success"]
-        successAlert.buttons["OK"].tap()
-        let pred2 = NSPredicate(format: "exists == false")
-        let exp2 = expectation(for: pred2, evaluatedWith: successAlert, handler: nil)
-        let res2 = XCTWaiter.wait(for: [exp2], timeout: 5.0)
-        XCTAssert(res2 == XCTWaiter.Result.completed, "Failed timeout for disappearance of save labbook alert")
-        
-        app.tables/*@START_MENU_TOKEN@*/.buttons["Export Experiment Data"]/*[[".cells.buttons[\"Export Experiment Data\"]",".buttons[\"Export Experiment Data\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-        successAlert.buttons["OK"].tap()
-        let pred3 = NSPredicate(format: "exists == false")
-        let exp3 = expectation(for: pred3, evaluatedWith: successAlert, handler: nil)
-        let res3 = XCTWaiter.wait(for: [exp3], timeout: 5.0)
-        XCTAssert(res3 == XCTWaiter.Result.completed, "Failed timeout for disappearance of save experiment data alert")
     }
     
+    func testNavigationStack() {
+        
+        // tap the cell that leads to the bee experiment setup
+        let entryTable = app.tables["EntryTable"]
+        let entryTableExists = entryTable.waitForExistence(timeout: 5.0)
+        XCTAssertTrue(entryTableExists)
+        let beeExperimentCell = entryTable.cells["BeeExperimentCell"]
+        beeExperimentCell.tap()
+        
+        // check if the bee experiment setup table opened
+        let beeExperimentSetupTable = app.tables["ExperimentSetupTable"]
+        let beeExperimentSetupExists = beeExperimentSetupTable.waitForExistence(timeout: 5.0)
+        XCTAssertTrue(beeExperimentSetupExists)
+        
+        // tap the newBee button (it is the second button, thus "boundBy 1")
+        let newBeeButton = app.navigationBars.buttons.element(boundBy: 1)
+        newBeeButton.tap()
+
+        // tap save
+        let saveButton = app.buttons["Save"]
+        saveButton.tap()
+        
+        // check if the new bee is shown in the table
+        let objectsTable = app.otherElements["ObjectsTable"]
+        XCTAssertTrue(objectsTable.cells.count == 1)
+        
+        // tap Start Experiment Button
+        let startCell = beeExperimentSetupTable.cells["StartExperimentCell"]
+        XCTAssertTrue(startCell.exists)
+        let startExperimentButton = startCell.buttons.element(boundBy: 0)
+        startExperimentButton.tap()
+        
+        // tap new bee again
+        let newBeeButtonInExperiment = app.navigationBars.buttons.element(boundBy: 1)
+        newBeeButtonInExperiment.tap()
+        
+        // tap Cancel
+        let cancelButton = app.buttons["Cancel"]
+        cancelButton.tap()
+        
+        let backButton = app.navigationBars.buttons.element(boundBy: 0)
+        backButton.tap()
+        
+        
+        
+
+        
+//        let app = XCUIApplication()
+//        let tablesQuery = app.tables
+//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["One bee visiting many flowers"]/*[[".cells.staticTexts[\"One bee visiting many flowers\"]",".staticTexts[\"One bee visiting many flowers\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        let oneBeeSetupNavigationBar = app.navigationBars["One Bee Setup"]
+//        oneBeeSetupNavigationBar.otherElements["One Bee Setup"].tap()
+//        oneBeeSetupNavigationBar.buttons["Bumblebees"].tap()
+//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["One flower visited by many bees"]/*[[".cells.staticTexts[\"One flower visited by many bees\"]",".staticTexts[\"One flower visited by many bees\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        let oneFlowerSetupNavigationBar = app.navigationBars["One Flower Setup"]
+//        oneFlowerSetupNavigationBar.otherElements["One Flower Setup"].tap()
+//        oneFlowerSetupNavigationBar.buttons["Bumblebees"].tap()
+//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Add lab book entry"]/*[[".cells.staticTexts[\"Add lab book entry\"]",".staticTexts[\"Add lab book entry\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+//
+//        let addEntryNavigationBar = app.navigationBars["Add Entry"]
+//        addEntryNavigationBar.otherElements["Add Entry"].tap()
+//        addEntryNavigationBar.buttons["Cancel"].tap()
+        
+        
+        
+    }
     
 }

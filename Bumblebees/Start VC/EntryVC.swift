@@ -70,6 +70,7 @@ class EntryVC: UITableViewController {
             activityItems.append(labBookURL)
         }
         let activityVC = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
+        activityVC.accessibilityLabel = "ActivityVC"
         if let popoverPresentationController = activityVC.popoverPresentationController {
             popoverPresentationController.sourceView = shareButton
         }
@@ -81,6 +82,7 @@ class EntryVC: UITableViewController {
         super.viewDidLoad()
         setUpTheming()
         nightModeSwitch.setOn(appDelegate.nightMode, animated: false)
+        tableView.accessibilityIdentifier = "EntryTable"
     }
     
     func export<T: JSONExportable>(_ data: T) {

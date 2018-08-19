@@ -41,6 +41,7 @@ class ExperimentSetupVC: UITableViewController {
         objectsTableView.family = family
         navigationItem.rightBarButtonItem?.title = "New \(family.familyName)"
         title = "One \(family.familyName) Setup"
+        tableView.accessibilityIdentifier = "ExperimentSetupTable"
     }
     
     override func didReceiveMemoryWarning() {

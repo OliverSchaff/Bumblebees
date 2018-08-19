@@ -18,10 +18,11 @@ class AddLabBookEntryVC: UITableViewController {
         let entry = LabBookEntry()
         entry.date = Date()
         entry.text = entryTextView.text
-        let realm = try! Realm()
-        try! realm.write {
-            labBook.entries.append(entry)
-        }
+        labBook.addEntry(entry)
+//        let realm = try! Realm()
+//        try! realm.write {
+//            labBook.entries.append(entry)
+//        }
         performSegue(withIdentifier: "unwindToExperimentSetupVC", sender: self)
     }
     @IBOutlet weak var entryTextView: UITextView!

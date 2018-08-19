@@ -11,7 +11,6 @@ import Foundation
 class BeeData: NameProvider {
     
     let name: String
-    let id: UUID
     
     static var nameIndex = 0
     static var availableNames = [String]()
@@ -31,6 +30,5 @@ class BeeData: NameProvider {
         }
         let index = Int(arc4random_uniform(UInt32(BeeData.availableNames.count)))
         self.name = BeeData.availableNames.remove(at: index)
-        self.id = UUID()
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 
 class FlowerData: NameProvider {
     let name: String
-    let id: UUID
+//    let id: UUID
     
     static var nameIndex = 0
     static var availableNames = [String]()
@@ -61,6 +61,6 @@ class FlowerData: NameProvider {
         }
         let index = Int(arc4random_uniform(UInt32(FlowerData.availableNames.count)))
         self.name = FlowerData.availableNames.remove(at: index)
-        self.id = UUID()
+//        self.id = UUID()
     }
 }

@@ -33,6 +33,13 @@ class LabBook: Object, JSONExportable {
         let myBeesExperimentLabBook = realm.object(ofType: LabBook.self, forPrimaryKey: "myBeesExperimentLabBook")
         return myBeesExperimentLabBook
     }
+    
+    func addEntry(_ entry: LabBookEntry) {
+        let realm = try! Realm()
+        try! realm.write {
+            entries.append(entry)
+        }
+    }
         
     func exportAsJSON(callback: (Result<Bool>)->()) {
         guard let fileURL = try? DataExportHelpers.generateFileURLForBaseString("LabBook", withExtension: "json") else {
