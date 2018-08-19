@@ -46,7 +46,7 @@ class BumblebeesUITests: XCTestCase {
         
     }
     
-    func testNavigationStack() {
+    func testExperimentWithNewBee() {
         
         // tap the cell that leads to the bee experiment setup
         let entryTable = app.tables["EntryTable"]
@@ -86,33 +86,30 @@ class BumblebeesUITests: XCTestCase {
         let cancelButton = app.buttons["Cancel"]
         cancelButton.tap()
         
-        let backButton = app.navigationBars.buttons.element(boundBy: 0)
-        backButton.tap()
+        // store text of visits label
+        let visitsText = app.staticTexts["VisitsLabel"].label
         
+        // tap right, left, undo buttons
+        app.otherElements["RightButton"].tap()
+        app.otherElements["LeftButton"].tap()
+        app.otherElements["UndoButton"].tap()
+
+        // check that the visits counter changed
+        let newVisitsText = app.staticTexts["VisitsLabel"].label
+        XCTAssertTrue(visitsText != newVisitsText)
+
+        // tap help button
+        let helpButton = app.buttons["HelpButton"]
+        helpButton.tap()
         
-        
+        // tap OK button
+        let okButton = app.buttons["OK"]
+        okButton.tap()
 
         
-//        let app = XCUIApplication()
-//        let tablesQuery = app.tables
-//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["One bee visiting many flowers"]/*[[".cells.staticTexts[\"One bee visiting many flowers\"]",".staticTexts[\"One bee visiting many flowers\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-//
-//        let oneBeeSetupNavigationBar = app.navigationBars["One Bee Setup"]
-//        oneBeeSetupNavigationBar.otherElements["One Bee Setup"].tap()
-//        oneBeeSetupNavigationBar.buttons["Bumblebees"].tap()
-//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["One flower visited by many bees"]/*[[".cells.staticTexts[\"One flower visited by many bees\"]",".staticTexts[\"One flower visited by many bees\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-//
-//        let oneFlowerSetupNavigationBar = app.navigationBars["One Flower Setup"]
-//        oneFlowerSetupNavigationBar.otherElements["One Flower Setup"].tap()
-//        oneFlowerSetupNavigationBar.buttons["Bumblebees"].tap()
-//        tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Add lab book entry"]/*[[".cells.staticTexts[\"Add lab book entry\"]",".staticTexts[\"Add lab book entry\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
-//
-//        let addEntryNavigationBar = app.navigationBars["Add Entry"]
-//        addEntryNavigationBar.otherElements["Add Entry"].tap()
-//        addEntryNavigationBar.buttons["Cancel"].tap()
-        
-        
-        
+        let backButton = app.navigationBars.buttons.element(boundBy: 0)
+        backButton.tap()
+        backButton.tap()
     }
     
 }

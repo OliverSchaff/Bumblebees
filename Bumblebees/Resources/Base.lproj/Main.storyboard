@@ -150,6 +150,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="12"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="LeftButton"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4M-g3-RlH" customClass="ButtonView" customModule="Bumblebees" customModuleProvider="target">
@@ -160,6 +161,7 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                         <real key="value" value="12"/>
                                                     </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="RightButton"/>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                         </subviews>
@@ -172,6 +174,7 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="12"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="UndoButton"/>
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
@@ -186,6 +189,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="VisitsLabel"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DE3-KZ-S7T">
                                 <rect key="frame" x="16" y="80" width="75" height="30"/>
@@ -208,6 +214,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6R-FS-qez">
                                 <rect key="frame" x="99" y="82" width="216" height="27"/>
                                 <state key="normal" image="HelpIcon"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="HelpButton"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="help:" destination="B7k-4B-WJN" eventType="touchUpInside" id="R1K-Aj-pl3"/>
                                 </connections>
