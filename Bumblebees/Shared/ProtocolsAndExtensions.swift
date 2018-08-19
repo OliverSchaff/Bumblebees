@@ -128,9 +128,8 @@ extension UIAlertController {
             speciesData = FlowerData()
         }
         let alert = UIAlertController(title: "New \(family.familyName)",
-            message: "Add name of \(family.familyName.lowercased())",
+            message: "Enter name of \(family.familyName.lowercased())",
             preferredStyle: .alert)
-        
         let saveAction = UIAlertAction(title: "Save",
                                        style: .default) { action in
                                         
@@ -142,7 +141,7 @@ extension UIAlertController {
         }
         
         let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .default)
+                                         style: .cancel)
         
         alert.addTextField { (textField) in
             textField.text = speciesData.name
@@ -153,6 +152,18 @@ extension UIAlertController {
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
         
+        alert.setUpTheming()
         return alert
     }
+}
+
+extension UIAlertController: Themed {
+    func applyTheme(_ theme: AppTheme) {
+        guard let textFields = textFields else { return }
+        for textField in textFields {
+            textField.keyboardAppearance = theme.keyboardAppearance
+        }
+    }
+    
+    
 }
