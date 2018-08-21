@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37D75DE1D9487B55C9E0903E /* Pods_BumblebeesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E02E1FE87106BEE043A4B73 /* Pods_BumblebeesUITests.framework */; };
-		78F92CE83B608DF0C4AFDCC6 /* Pods_BumblebeesUnitTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC02C984803EEF6BB217CA6A /* Pods_BumblebeesUnitTests.framework */; };
 		A2269C102116F81900D82EF1 /* BumblebeesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2269C0F2116F81900D82EF1 /* BumblebeesUITests.swift */; };
 		A227734D2110DC9F007C03EE /* LogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227734B2110DC9E007C03EE /* LogicController.swift */; };
 		A227734E2110DC9F007C03EE /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227734C2110DC9E007C03EE /* Renderer.swift */; };
@@ -53,7 +51,6 @@
 		A2462E3F2115C0A30016ADC8 /* License.txt in Resources */ = {isa = PBXBuildFile; fileRef = A2462E3E2115C0A30016ADC8 /* License.txt */; };
 		A2462E552115C9080016ADC8 /* BumblebeesUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2462E542115C9080016ADC8 /* BumblebeesUnitTests.swift */; };
 		A24C5F0E211F2983004B5A08 /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C5F0D211F2983004B5A08 /* Objects.swift */; };
-		D29AD87ED389EEFF6B38A130 /* Pods_Bumblebees.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,8 +73,6 @@
 /* Begin PBXFileReference section */
 		160A5D81F81B4BD4AB2F7ADC /* Pods-BumblebeesUnitTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumblebeesUnitTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumblebeesUnitTests/Pods-BumblebeesUnitTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2E4BE2A735F5B1081AA4E149 /* Pods-Bumblebees.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebees.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees.release.xcconfig"; sourceTree = "<group>"; };
-		3E02E1FE87106BEE043A4B73 /* Pods_BumblebeesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumblebeesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bumblebees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6390D72CCAC9A5FD33C609E9 /* Pods-BumblebeesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumblebeesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumblebeesUITests/Pods-BumblebeesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D5A2053CC23F96DC227A606 /* Pods-BumblebeesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumblebeesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumblebeesUITests/Pods-BumblebeesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		92F7FC4D1C280A7DBD2BE462 /* Pods-Bumblebees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,11 +127,6 @@
 		A24C5F0D211F2983004B5A08 /* Objects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
 		A2CEC56F2110D8EE00684926 /* Bumblebees.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bumblebees.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2D9E86A2110DE610080897B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A2EEB1BD2115FEDF002C46EA /* Pods_Bumblebees.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Bumblebees.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2EEB1BF2115FF43002C46EA /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2EEB1C12115FF64002C46EA /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2EEB1C32115FF6F002C46EA /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BC02C984803EEF6BB217CA6A /* Pods_BumblebeesUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BumblebeesUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDC1B62D97C1C120C94D6F9B /* Pods-BumblebeesUnitTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumblebeesUnitTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumblebeesUnitTests/Pods-BumblebeesUnitTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,7 +135,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37D75DE1D9487B55C9E0903E /* Pods_BumblebeesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78F92CE83B608DF0C4AFDCC6 /* Pods_BumblebeesUnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,7 +149,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D29AD87ED389EEFF6B38A130 /* Pods_Bumblebees.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,13 +329,6 @@
 		A35208BB14D3A46F5FF27B19 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A2EEB1C32115FF6F002C46EA /* RealmSwift.framework */,
-				A2EEB1C12115FF64002C46EA /* Realm.framework */,
-				A2EEB1BF2115FF43002C46EA /* Realm.framework */,
-				A2EEB1BD2115FEDF002C46EA /* Pods_Bumblebees.framework */,
-				6113E72C2EB05DCF60137D68 /* Pods_Bumblebees.framework */,
-				BC02C984803EEF6BB217CA6A /* Pods_BumblebeesUnitTests.framework */,
-				3E02E1FE87106BEE043A4B73 /* Pods_BumblebeesUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
