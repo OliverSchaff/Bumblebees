@@ -68,7 +68,7 @@ class ExperimentSetupVC: UITableViewController {
     }
     
     func openNewObjectAlert() {
-        let alert = UIAlertController.nameForObjectOfFamily(family!) { (name) in
+        let alert = AppMalert.nameForObjectOfFamily(family!) { (name) in
             let object = Objects.newObject(name: name, family: self.family)
             self.objectsTableView.selectedObject = object
         }
@@ -76,7 +76,7 @@ class ExperimentSetupVC: UITableViewController {
     }
     
     func openSelectObjectAlert() {
-        let alert = UIAlertController.ok(title: "Select \(family.familyName)", message: "Please select a \(family.familyName.lowercased()) for the experiment.")
+        let alert = AppMalert.ok(title: "Select \(family.familyName)", message: "Please select a \(family.familyName.lowercased()) for the experiment.")
         present(alert, animated: true)
     }
     

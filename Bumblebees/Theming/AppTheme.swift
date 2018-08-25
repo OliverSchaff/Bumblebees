@@ -20,6 +20,10 @@ struct AppTheme {
     var cellSelectedColor: UIColor
     var textFieldBackgroundColor: UIColor
     var keyboardAppearance: UIKeyboardAppearance
+    var alertBackgroundColor: UIColor
+    var alertSeparatorColor: UIColor
+    var textViewBorderColor: CGColor
+    var alertTextColor: UIColor
 }
 
 extension AppTheme {
@@ -34,7 +38,11 @@ extension AppTheme {
         headerFooterTextColor:  UIColor(white: 0.2, alpha: 1),
         cellSelectedColor: .lightGreenDay,
         textFieldBackgroundColor: .white,
-        keyboardAppearance: .light
+        keyboardAppearance: .light,
+        alertBackgroundColor: .white,
+        alertSeparatorColor: UIColor(white: 0.9, alpha: 1),
+        textViewBorderColor: UIColor(white: 0.8, alpha: 1).cgColor,
+        alertTextColor: .darkText
 	)
 
 	static let dark = AppTheme(
@@ -47,7 +55,11 @@ extension AppTheme {
         cellBackgroundColor: UIColor(white: 0.2, alpha: 1),
         headerFooterTextColor:  UIColor(white: 0.8, alpha: 1),
         cellSelectedColor: .darkGreenNight,
-        textFieldBackgroundColor: UIColor(white: 0.3, alpha: 1),
-        keyboardAppearance: .dark
+        textFieldBackgroundColor: UIColor(white: 0.4, alpha: 1),
+        keyboardAppearance: .dark,
+        alertBackgroundColor: UIColor(white: 0.3, alpha: 1),
+        alertSeparatorColor: UIColor(white: 0.4, alpha: 1),
+        textViewBorderColor: UIColor(white: 0.4, alpha: 1).cgColor,
+        alertTextColor: .white
 	)
 }

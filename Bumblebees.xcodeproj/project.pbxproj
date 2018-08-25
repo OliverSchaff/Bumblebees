@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A200CF73212F2A0D008AEE1B /* OKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200CF6D212F2A0D008AEE1B /* OKView.swift */; };
+		A200CF74212F2A0D008AEE1B /* OKView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A200CF6E212F2A0D008AEE1B /* OKView.xib */; };
+		A200CF76212F2A0D008AEE1B /* NewObjectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A200CF70212F2A0D008AEE1B /* NewObjectView.xib */; };
+		A200CF77212F2A0D008AEE1B /* NewObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200CF71212F2A0D008AEE1B /* NewObjectView.swift */; };
+		A200D094212F2ADC008AEE1B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D07C212F2ADC008AEE1B /* Extensions.swift */; };
+		A200D095212F2ADC008AEE1B /* MalertQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D07D212F2ADC008AEE1B /* MalertQueue.swift */; };
+		A200D096212F2ADC008AEE1B /* MalertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D07F212F2ADC008AEE1B /* MalertView.swift */; };
+		A200D098212F2ADC008AEE1B /* MalertButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D082212F2ADC008AEE1B /* MalertButtonView.swift */; };
+		A200D099212F2ADC008AEE1B /* MalertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D083212F2ADC008AEE1B /* MalertAction.swift */; };
+		A200D09A212F2ADC008AEE1B /* Malert+Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D085212F2ADC008AEE1B /* Malert+Actions.swift */; };
+		A200D09B212F2ADC008AEE1B /* Malert+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D086212F2ADC008AEE1B /* Malert+Constraints.swift */; };
+		A200D09C212F2ADC008AEE1B /* Malert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D087212F2ADC008AEE1B /* Malert.swift */; };
+		A200D09D212F2ADC008AEE1B /* BaseMalertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D089212F2ADC008AEE1B /* BaseMalertViewController.swift */; };
+		A200D09E212F2ADC008AEE1B /* BaseTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D08B212F2ADC008AEE1B /* BaseTransitioning.swift */; };
+		A200D09F212F2ADC008AEE1B /* MalertPresentationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D08C212F2ADC008AEE1B /* MalertPresentationManager.swift */; };
+		A200D0A0212F2ADC008AEE1B /* MalertDimissTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D08D212F2ADC008AEE1B /* MalertDimissTransitioning.swift */; };
+		A200D0A1212F2ADC008AEE1B /* MalertPresentTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D08E212F2ADC008AEE1B /* MalertPresentTransitioning.swift */; };
+		A200D0A2212F2ADC008AEE1B /* MalertInteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D08F212F2ADC008AEE1B /* MalertInteractiveTransition.swift */; };
+		A200D0A721306E87008AEE1B /* AppMalert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D0A621306E87008AEE1B /* AppMalert.swift */; };
+		A200D0A921318267008AEE1B /* AppAlertLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A200D0A821318267008AEE1B /* AppAlertLabel.swift */; };
 		A2269C102116F81900D82EF1 /* BumblebeesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2269C0F2116F81900D82EF1 /* BumblebeesUITests.swift */; };
 		A227734D2110DC9F007C03EE /* LogicController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227734B2110DC9E007C03EE /* LogicController.swift */; };
 		A227734E2110DC9F007C03EE /* Renderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A227734C2110DC9E007C03EE /* Renderer.swift */; };
@@ -76,6 +96,26 @@
 		6390D72CCAC9A5FD33C609E9 /* Pods-BumblebeesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumblebeesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BumblebeesUITests/Pods-BumblebeesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		7D5A2053CC23F96DC227A606 /* Pods-BumblebeesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BumblebeesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BumblebeesUITests/Pods-BumblebeesUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		92F7FC4D1C280A7DBD2BE462 /* Pods-Bumblebees.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bumblebees.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bumblebees/Pods-Bumblebees.debug.xcconfig"; sourceTree = "<group>"; };
+		A200CF6D212F2A0D008AEE1B /* OKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OKView.swift; sourceTree = "<group>"; };
+		A200CF6E212F2A0D008AEE1B /* OKView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OKView.xib; sourceTree = "<group>"; };
+		A200CF70212F2A0D008AEE1B /* NewObjectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewObjectView.xib; sourceTree = "<group>"; };
+		A200CF71212F2A0D008AEE1B /* NewObjectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewObjectView.swift; sourceTree = "<group>"; };
+		A200D07C212F2ADC008AEE1B /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A200D07D212F2ADC008AEE1B /* MalertQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalertQueue.swift; sourceTree = "<group>"; };
+		A200D07F212F2ADC008AEE1B /* MalertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalertView.swift; sourceTree = "<group>"; };
+		A200D082212F2ADC008AEE1B /* MalertButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalertButtonView.swift; sourceTree = "<group>"; };
+		A200D083212F2ADC008AEE1B /* MalertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalertAction.swift; sourceTree = "<group>"; };
+		A200D085212F2ADC008AEE1B /* Malert+Actions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Malert+Actions.swift"; sourceTree = "<group>"; };
+		A200D086212F2ADC008AEE1B /* Malert+Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Malert+Constraints.swift"; sourceTree = "<group>"; };
+		A200D087212F2ADC008AEE1B /* Malert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Malert.swift; sourceTree = "<group>"; };
+		A200D089212F2ADC008AEE1B /* BaseMalertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseMalertViewController.swift; sourceTree = "<group>"; };
+		A200D08B212F2ADC008AEE1B /* BaseTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransitioning.swift; sourceTree = "<group>"; };
+		A200D08C212F2ADC008AEE1B /* MalertPresentationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalertPresentationManager.swift; sourceTree = "<group>"; };
+		A200D08D212F2ADC008AEE1B /* MalertDimissTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalertDimissTransitioning.swift; sourceTree = "<group>"; };
+		A200D08E212F2ADC008AEE1B /* MalertPresentTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalertPresentTransitioning.swift; sourceTree = "<group>"; };
+		A200D08F212F2ADC008AEE1B /* MalertInteractiveTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MalertInteractiveTransition.swift; sourceTree = "<group>"; };
+		A200D0A621306E87008AEE1B /* AppMalert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMalert.swift; sourceTree = "<group>"; };
+		A200D0A821318267008AEE1B /* AppAlertLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAlertLabel.swift; sourceTree = "<group>"; };
 		A2269C0D2116F81900D82EF1 /* BumblebeesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BumblebeesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2269C0F2116F81900D82EF1 /* BumblebeesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BumblebeesUITests.swift; sourceTree = "<group>"; };
 		A2269C112116F81900D82EF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -155,6 +195,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A200CF6B212F2A0D008AEE1B /* Alerts */ = {
+			isa = PBXGroup;
+			children = (
+				A200CF6D212F2A0D008AEE1B /* OKView.swift */,
+				A200CF6E212F2A0D008AEE1B /* OKView.xib */,
+				A200CF71212F2A0D008AEE1B /* NewObjectView.swift */,
+				A200CF70212F2A0D008AEE1B /* NewObjectView.xib */,
+			);
+			name = Alerts;
+			path = "../../Malert-master/Example/Malert/Alerts";
+			sourceTree = "<group>";
+		};
+		A200D079212F2ADC008AEE1B /* Malert */ = {
+			isa = PBXGroup;
+			children = (
+				A200D07A212F2ADC008AEE1B /* Classes */,
+			);
+			path = Malert;
+			sourceTree = "<group>";
+		};
+		A200D07A212F2ADC008AEE1B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A200D07B212F2ADC008AEE1B /* Util */,
+				A200D07E212F2ADC008AEE1B /* MalertView */,
+				A200D081212F2ADC008AEE1B /* MalertButtonView */,
+				A200D084212F2ADC008AEE1B /* Malert */,
+				A200D088212F2ADC008AEE1B /* Base */,
+				A200D08A212F2ADC008AEE1B /* Animations */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A200D07B212F2ADC008AEE1B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A200D07C212F2ADC008AEE1B /* Extensions.swift */,
+				A200D07D212F2ADC008AEE1B /* MalertQueue.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		A200D07E212F2ADC008AEE1B /* MalertView */ = {
+			isa = PBXGroup;
+			children = (
+				A200D07F212F2ADC008AEE1B /* MalertView.swift */,
+			);
+			path = MalertView;
+			sourceTree = "<group>";
+		};
+		A200D081212F2ADC008AEE1B /* MalertButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				A200D082212F2ADC008AEE1B /* MalertButtonView.swift */,
+				A200D083212F2ADC008AEE1B /* MalertAction.swift */,
+			);
+			path = MalertButtonView;
+			sourceTree = "<group>";
+		};
+		A200D084212F2ADC008AEE1B /* Malert */ = {
+			isa = PBXGroup;
+			children = (
+				A200D085212F2ADC008AEE1B /* Malert+Actions.swift */,
+				A200D086212F2ADC008AEE1B /* Malert+Constraints.swift */,
+				A200D087212F2ADC008AEE1B /* Malert.swift */,
+			);
+			path = Malert;
+			sourceTree = "<group>";
+		};
+		A200D088212F2ADC008AEE1B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A200D089212F2ADC008AEE1B /* BaseMalertViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A200D08A212F2ADC008AEE1B /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				A200D08B212F2ADC008AEE1B /* BaseTransitioning.swift */,
+				A200D08C212F2ADC008AEE1B /* MalertPresentationManager.swift */,
+				A200D08D212F2ADC008AEE1B /* MalertDimissTransitioning.swift */,
+				A200D08E212F2ADC008AEE1B /* MalertPresentTransitioning.swift */,
+				A200D08F212F2ADC008AEE1B /* MalertInteractiveTransition.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		A2269C0E2116F81900D82EF1 /* BumblebeesUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +391,8 @@
 				A22773872110DD3B007C03EE /* AppLabel.swift */,
 				A22773882110DD3B007C03EE /* AppTableViewCell.swift */,
 				A22773892110DD3B007C03EE /* AppNavigationController.swift */,
+				A200D0A621306E87008AEE1B /* AppMalert.swift */,
+				A200D0A821318267008AEE1B /* AppAlertLabel.swift */,
 			);
 			path = "Themed Subclasses and Extensions";
 			sourceTree = "<group>";
@@ -310,6 +441,8 @@
 		A2CEC5712110D8EE00684926 /* Bumblebees */ = {
 			isa = PBXGroup;
 			children = (
+				A200D079212F2ADC008AEE1B /* Malert */,
+				A200CF6B212F2A0D008AEE1B /* Alerts */,
 				A2462E3D2115A9530016ADC8 /* Simulator Screen Shot - iPhone 8 Plus - 2018-07-29 at 18.09.19.png */,
 				A2D9E86A2110DE610080897B /* Info.plist */,
 				A227734F2110DCAC007C03EE /* Theming */,
@@ -470,7 +603,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A200CF74212F2A0D008AEE1B /* OKView.xib in Resources */,
 				A227739E2110DD3B007C03EE /* LaunchScreen.storyboard in Resources */,
+				A200CF76212F2A0D008AEE1B /* NewObjectView.xib in Resources */,
 				A2462E3F2115C0A30016ADC8 /* License.txt in Resources */,
 				A227739C2110DD3B007C03EE /* Assets.xcassets in Resources */,
 				A227739F2110DD3B007C03EE /* Main.storyboard in Resources */,
@@ -618,27 +753,37 @@
 			buildActionMask = 2147483647;
 			files = (
 				A22773542110DCAC007C03EE /* AppThemeProvider.swift in Sources */,
+				A200D099212F2ADC008AEE1B /* MalertAction.swift in Sources */,
 				A227738F2110DD3B007C03EE /* Stack.swift in Sources */,
 				A22773932110DD3B007C03EE /* ProtocolsAndExtensions.swift in Sources */,
 				A22773A72110DD3B007C03EE /* EntryVC.swift in Sources */,
 				A22773962110DD3B007C03EE /* ExperimentLogicController.swift in Sources */,
+				A200D0A2212F2ADC008AEE1B /* MalertInteractiveTransition.swift in Sources */,
+				A200D09F212F2ADC008AEE1B /* MalertPresentationManager.swift in Sources */,
 				A22773652110DD26007C03EE /* LabBookEntry.swift in Sources */,
 				A22773632110DD26007C03EE /* NameProvider.swift in Sources */,
+				A200D09C212F2ADC008AEE1B /* Malert.swift in Sources */,
+				A200D0A1212F2ADC008AEE1B /* MalertPresentTransitioning.swift in Sources */,
 				A22773942110DD3B007C03EE /* DataExportHelpers.swift in Sources */,
 				A22773532110DCAC007C03EE /* Theming.swift in Sources */,
 				A227739B2110DD3B007C03EE /* ButtonView.swift in Sources */,
 				A24C5F0E211F2983004B5A08 /* Objects.swift in Sources */,
+				A200D096212F2ADC008AEE1B /* MalertView.swift in Sources */,
 				A22773602110DD26007C03EE /* LabBook.swift in Sources */,
 				A22773902110DD3B007C03EE /* Result.swift in Sources */,
 				A227734D2110DC9F007C03EE /* LogicController.swift in Sources */,
+				A200D09A212F2ADC008AEE1B /* Malert+Actions.swift in Sources */,
 				A22773622110DD26007C03EE /* FlowerData.swift in Sources */,
 				A227738E2110DD3B007C03EE /* EditObjectVC.swift in Sources */,
 				A22773A62110DD3B007C03EE /* AppNavigationController.swift in Sources */,
 				A22773662110DD26007C03EE /* ObjectStudied.swift in Sources */,
 				A22773552110DCAC007C03EE /* AppTheme.swift in Sources */,
+				A200D094212F2ADC008AEE1B /* Extensions.swift in Sources */,
+				A200D0A0212F2ADC008AEE1B /* MalertDimissTransitioning.swift in Sources */,
 				A22773992110DD3B007C03EE /* ExperimentVC.swift in Sources */,
 				A22773A52110DD3B007C03EE /* AppTableViewCell.swift in Sources */,
 				A22773A32110DD3B007C03EE /* AppTableView.swift in Sources */,
+				A200D0A721306E87008AEE1B /* AppMalert.swift in Sources */,
 				A22773612110DD26007C03EE /* Event.swift in Sources */,
 				A22773972110DD3B007C03EE /* ObjectsTableView.swift in Sources */,
 				A227739A2110DD3B007C03EE /* ObjectCell.swift in Sources */,
@@ -647,14 +792,22 @@
 				A227734E2110DC9F007C03EE /* Renderer.swift in Sources */,
 				A22773912110DD3B007C03EE /* AppDelegate.swift in Sources */,
 				A22773922110DD3B007C03EE /* SubscribableValue.swift in Sources */,
+				A200D09B212F2ADC008AEE1B /* Malert+Constraints.swift in Sources */,
 				A22773982110DD3B007C03EE /* ExperimentSetupVC.swift in Sources */,
+				A200D09D212F2ADC008AEE1B /* BaseMalertViewController.swift in Sources */,
 				A227739D2110DD3B007C03EE /* Bumblebees.xcdatamodeld in Sources */,
 				A227738D2110DD3B007C03EE /* AddLabBookEntryVC.swift in Sources */,
 				A22773A22110DD3B007C03EE /* AppTabBarController.swift in Sources */,
 				A22773A02110DD3B007C03EE /* AppTextView.swift in Sources */,
+				A200CF77212F2A0D008AEE1B /* NewObjectView.swift in Sources */,
+				A200CF73212F2A0D008AEE1B /* OKView.swift in Sources */,
 				A22773952110DD3B007C03EE /* Weak.swift in Sources */,
+				A200D098212F2ADC008AEE1B /* MalertButtonView.swift in Sources */,
 				A22773A42110DD3B007C03EE /* AppLabel.swift in Sources */,
 				A22773A12110DD3B007C03EE /* AppTextField.swift in Sources */,
+				A200D095212F2ADC008AEE1B /* MalertQueue.swift in Sources */,
+				A200D09E212F2ADC008AEE1B /* BaseTransitioning.swift in Sources */,
+				A200D0A921318267008AEE1B /* AppAlertLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

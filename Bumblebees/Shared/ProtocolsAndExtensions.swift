@@ -107,63 +107,63 @@ extension UIViewController {
     }
 }
 
-extension UIAlertController {
-    static func ok(title: String, message: String) -> UIAlertController {
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: .alert)
-        
-        let okAction = UIAlertAction(title: "OK",
-                                     style: .default)
-        alert.addAction(okAction)
-        return alert
-    }
-    
-    static func nameForObjectOfFamily(_ family: ObjectStudied.Family, callback: @escaping (String)->()) -> UIAlertController {
-        var speciesData: NameProvider!
-        switch family {
-        case .bee:
-            speciesData = BeeData()
-        case .flower:
-            speciesData = FlowerData()
-        }
-        let alert = UIAlertController(title: "New \(family.familyName)",
-            message: "Enter name of \(family.familyName.lowercased())",
-            preferredStyle: .alert)
-        let saveAction = UIAlertAction(title: "Save",
-                                       style: .default) { action in
-                                        
-                                        guard let textField = alert.textFields?.first,
-                                            let nameOfObject = textField.text else {
-                                                return
-                                        }
-                                        callback(nameOfObject)
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel",
-                                         style: .cancel)
-        
-        alert.addTextField { (textField) in
-            textField.text = speciesData.name
-            textField.placeholder = "Enter name"
-            textField.clearButtonMode = .always
-        }
-        
-        alert.addAction(saveAction)
-        alert.addAction(cancelAction)
-        
-        alert.setUpTheming()
-        return alert
-    }
-}
-
-extension UIAlertController: Themed {
-    func applyTheme(_ theme: AppTheme) {
-        guard let textFields = textFields else { return }
-        for textField in textFields {
-            textField.keyboardAppearance = theme.keyboardAppearance
-        }
-    }
-    
-    
-}
+//extension UIAlertController {
+//    static func ok(title: String, message: String) -> UIAlertController {
+//        let alert = UIAlertController(title: title,
+//                                      message: message,
+//                                      preferredStyle: .alert)
+//        
+//        let okAction = UIAlertAction(title: "OK",
+//                                     style: .default)
+//        alert.addAction(okAction)
+//        return alert
+//    }
+//    
+//    static func nameForObjectOfFamily(_ family: ObjectStudied.Family, callback: @escaping (String)->()) -> UIAlertController {
+//        var speciesData: NameProvider!
+//        switch family {
+//        case .bee:
+//            speciesData = BeeData()
+//        case .flower:
+//            speciesData = FlowerData()
+//        }
+//        let alert = UIAlertController(title: "New \(family.familyName)",
+//            message: "Enter name of \(family.familyName.lowercased())",
+//            preferredStyle: .alert)
+//        let saveAction = UIAlertAction(title: "Save",
+//                                       style: .default) { action in
+//                                        
+//                                        guard let textField = alert.textFields?.first,
+//                                            let nameOfObject = textField.text else {
+//                                                return
+//                                        }
+//                                        callback(nameOfObject)
+//        }
+//        
+//        let cancelAction = UIAlertAction(title: "Cancel",
+//                                         style: .cancel)
+//        
+//        alert.addTextField { (textField) in
+//            textField.text = speciesData.name
+//            textField.placeholder = "Enter name"
+//            textField.clearButtonMode = .always
+//        }
+//        
+//        alert.addAction(saveAction)
+//        alert.addAction(cancelAction)
+//        
+//        alert.setUpTheming()
+//        return alert
+//    }
+//}
+//
+//extension UIAlertController: Themed {
+//    func applyTheme(_ theme: AppTheme) {
+//        guard let textFields = textFields else { return }
+//        for textField in textFields {
+//            textField.keyboardAppearance = theme.keyboardAppearance
+//        }
+//    }
+//    
+//    
+//}
